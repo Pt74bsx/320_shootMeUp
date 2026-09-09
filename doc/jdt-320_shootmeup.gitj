@@ -36,5 +36,96 @@
       "source": "author"
     }
   ],
-  "exceptions": []
+  "exceptions": [
+    {
+      "id": "382df264-5a08-439d-a83c-29e941b159f7",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-08-28T11:10:00.000Z",
+      "name": "meet(projet) Ecouter les instruction du projet ",
+      "description": "- Cahier des charges \r\n- Conventions technique\r\n- Outils \r\n- Déroulement du projet ",
+      "duration": 90,
+      "status": "Done"
+    },
+    {
+      "id": "e1d083b8-c8cd-45ad-b6ef-b3c67a832680",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-04T11:10:00.000Z",
+      "name": "meet(Rapport) Disscution sur la livraison ",
+      "description": "- Rapport\r\n- Journal.pdf",
+      "duration": 20,
+      "status": "Done"
+    },
+    {
+      "id": "ce48437a-15ab-4e6d-87c2-182a1c1373c9",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-04T11:30:00.000Z",
+      "name": "chore(userStory) ",
+      "description": "Création des 3 premières user story (Déplacement, Système de tirs, Ennemis)\r\n- Création des maquettes pour accompagner les users storys",
+      "duration": 110,
+      "status": "Done"
+    },
+    {
+      "id": "d40edd5c-828a-45b1-9ac7-72c6f5552ac5",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-04T13:45:00.000Z",
+      "name": "chore(image) Génération d'imges",
+      "description": "Génération des images des ennemis, d'animation du personnage, de la carte ",
+      "duration": 20,
+      "status": "Done"
+    },
+    {
+      "id": "bc7e5aa4-7878-479f-ad26-c5889866ca36",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-04T14:05:00.000Z",
+      "name": "doc(Rapport) Création de la structure du rapport",
+      "description": "Création du document Word pour le rapport avec toute la structure (table des matières, page de garde, informations sur le document)",
+      "duration": 15,
+      "status": "Done"
+    },
+    {
+      "id": "74d3f0f9-bd2a-4241-8eb8-354eed5dfbfd",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-04T14:20:00.000Z",
+      "name": "doc(Journal de travail) Remplissage du journal de travail",
+      "description": "Remplissage du journal de travail, avec toutes les activités du jours, les temps, etc.",
+      "duration": 15,
+      "status": "Done"
+    },
+    {
+      "id": "1c7a9fe9-2c34-4a5e-a5cc-00e2b8d6d826",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-08-28T13:00:00.000Z",
+      "name": "chore(Réflexion) Trouver le thème du jeux",
+      "description": "Réflexion sur le thème du jeux, les règles, fonctionnement, types d'ennemis, etc.",
+      "duration": 25,
+      "status": "Done"
+    },
+    {
+      "id": "036abe5d-2ce6-4aca-b17a-deb1ca7e5769",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-08-28T13:25:00.000Z",
+      "name": "chore(Assets) Génération d'image et maquettes",
+      "description": "Création d'une première maquette résument le fonctionnement principal du jeux et générations d'images d'ennemis, du personnage principal et des projectiles",
+      "duration": 40,
+      "status": "Done"
+    },
+    {
+      "id": "4864065e-52fa-4d0f-8f61-fa188b13c97e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-08-28T14:05:00.000Z",
+      "name": "doc(journal de travail) Création du journal de travail",
+      "description": "Création du journal de travail ainsi que l'ajout des tâches effectuer durant la séquence ",
+      "duration": 20,
+      "status": "Done"
+    }
+  ]
 }
