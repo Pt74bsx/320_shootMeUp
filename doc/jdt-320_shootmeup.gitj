@@ -126,6 +126,26 @@
       "description": "Création du journal de travail ainsi que l'ajout des tâches effectuer durant la séquence ",
       "duration": 20,
       "status": "Done"
+    },
+    {
+      "id": "01f727e5-faa2-4e0b-b175-09343cb97e9d",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-11T11:10:00.000Z",
+      "name": "chore(userStory)",
+      "description": "Création des user story 4, 5, 6, 7, 8 avec une maquette par US ",
+      "duration": 50,
+      "status": "Done"
+    },
+    {
+      "id": "a2858627-c426-4bbd-b702-716de943729e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-11T12:00:00.000Z",
+      "name": "chore(rapport)",
+      "description": "Remplissage du rapport avec analyse des US, etc.",
+      "duration": 45,
+      "status": "Done"
     }
   ]
 }
