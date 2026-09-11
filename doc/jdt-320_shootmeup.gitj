@@ -176,6 +176,26 @@
       "description": "Amélioration des tests, utilisation d'affirmations à la place de tests à la première personne et correction orthographique du texte.\r\n",
       "duration": 15,
       "status": "Done"
+    },
+    {
+      "id": "78e418c2-34ad-46ed-a7bb-21c4aa9b7146",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-11T14:15:00.000Z",
+      "name": "chore(code) ",
+      "description": "Ajout de la base de code (Drone) disponible dans pm2 ETML",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "ef362698-cf38-4e6c-a3b7-7948c8f10210",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-11T14:20:00.000Z",
+      "name": "chore(Journal de travail)",
+      "description": "Ajout de toutes les tâches effectuées durant la séquence N°2 (inscription des tâches au fur et à mesure)",
+      "duration": 15,
+      "status": "Done"
     }
   ]
 }
