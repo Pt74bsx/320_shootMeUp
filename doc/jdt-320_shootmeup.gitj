@@ -164,17 +164,17 @@
       "date": "2026-09-11T13:20:00.000Z",
       "name": "chore(rapport) Amélioration",
       "description": "Amélioration de l'expression orthographique utilisée dans le rapport ainsi qu'une amélioration au niveau de la précision des textes.",
-      "duration": 30,
+      "duration": 40,
       "status": "Done"
     },
     {
       "id": "831af2fb-7add-47b4-963a-8d74efdc502c",
       "type": "commitless",
       "author": "Pt74bsx",
-      "date": "2026-09-11T13:50:00.000Z",
+      "date": "2026-09-11T14:00:00.000Z",
       "name": "chore(userStory)",
       "description": "Amélioration des tests, utilisation d'affirmations à la place de tests à la première personne et correction orthographique du texte.\r\n",
-      "duration": 10,
+      "duration": 15,
       "status": "Done"
     }
   ]
