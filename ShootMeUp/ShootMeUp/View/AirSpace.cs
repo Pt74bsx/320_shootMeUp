@@ -10,13 +10,13 @@ namespace ShootMeUp
         public static readonly int HEIGHT = 600;
 
         // La flotte est l'ensemble des drones qui �voluent dans notre espace a�rien
-        private Drone _player;
+        private Pinguin _player;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
 
         // Initialisation de l'espace a�rien avec un certain nombre de drones
-        public AirSpace(Drone player)
+        public AirSpace(Pinguin player)
         {
             InitializeComponent();
             ClientSize = new Size(WIDTH, HEIGHT);
