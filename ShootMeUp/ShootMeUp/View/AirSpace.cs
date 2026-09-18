@@ -1,7 +1,7 @@
-namespace Drones
+namespace ShootMeUp
 {
-    // La classe AirSpace représente le territoire au dessus duquel les drones peuvent voler
-    // Il s'agit d'un formulaire (une fenêtre) qui montre une vue 2D depuis en dessus
+    // La classe AirSpace reprï¿½sente le territoire au dessus duquel les drones peuvent voler
+    // Il s'agit d'un formulaire (une fenï¿½tre) qui montre une vue 2D depuis en dessus
     // Il n'y a donc pas de notion d'altitude qui intervient
 
     public partial class AirSpace : Form
@@ -9,13 +9,13 @@ namespace Drones
         public static readonly int WIDTH = 1200;        // Dimensions of the airspace
         public static readonly int HEIGHT = 600;
 
-        // La flotte est l'ensemble des drones qui évoluent dans notre espace aérien
+        // La flotte est l'ensemble des drones qui ï¿½voluent dans notre espace aï¿½rien
         private Drone _player;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
 
-        // Initialisation de l'espace aérien avec un certain nombre de drones
+        // Initialisation de l'espace aï¿½rien avec un certain nombre de drones
         public AirSpace(Drone player)
         {
             InitializeComponent();
@@ -39,13 +39,13 @@ namespace Drones
             airspace.Render();
         }
 
-        // Calcul du nouvel état après que 'interval' millisecondes se sont écoulées
+        // Calcul du nouvel ï¿½tat aprï¿½s que 'interval' millisecondes se sont ï¿½coulï¿½es
         private void Update(int interval)
         {
             _player.Update(interval);
         }
 
-        // Méthode appelée à chaque frame
+        // Mï¿½thode appelï¿½e ï¿½ chaque frame
         private void NewFrame(object sender, EventArgs e)
         {
             this.Update(ticker.Interval);
