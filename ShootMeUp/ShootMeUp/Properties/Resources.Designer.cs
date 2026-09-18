@@ -63,6 +63,45 @@ namespace ShootMeUp.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundHomeSpace {
+            get {
+                object obj = ResourceManager.GetObject("backgroundHomeSpace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_jouer {
+            get {
+                object obj = ResourceManager.GetObject("btn-jouer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_quitter {
+            get {
+                object obj = ResourceManager.GetObject("btn-quitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap btn_over_leave
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("btn_over_leave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap drone {
             get {
                 object obj = ResourceManager.GetObject("drone", resourceCulture);

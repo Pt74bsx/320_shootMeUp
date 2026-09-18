@@ -4,7 +4,7 @@ namespace ShootMeUp
     // Il s'agit d'un formulaire (une fen�tre) qui montre une vue 2D depuis en dessus
     // Il n'y a donc pas de notion d'altitude qui intervient
 
-    public partial class AirSpace : Form
+    public partial class GameSpace : Form
     {
         public static readonly int WIDTH = 1200;        // Dimensions of the airspace
         public static readonly int HEIGHT = 600;
@@ -16,7 +16,7 @@ namespace ShootMeUp
         BufferedGraphics airspace;
 
         // Initialisation de l'espace a�rien avec un certain nombre de drones
-        public AirSpace(Pinguin player)
+        public GameSpace()
         {
             InitializeComponent();
             ClientSize = new Size(WIDTH, HEIGHT);
@@ -26,7 +26,7 @@ namespace ShootMeUp
             // Creates a BufferedGraphics instance associated with this form, and with
             // dimensions the same size as the drawing surface of the form.
             airspace = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
-            this._player = player;
+            this._player = new Pinguin(10,10,"Joe");
         }
 
         // Affichage de la situation actuelle

@@ -1,6 +1,6 @@
 ﻿namespace ShootMeUp
 {
-    partial class AirSpace
+    partial class GameSpace
     {
         /// <summary>
         ///  Required designer variable.

@@ -13,7 +13,7 @@ namespace ShootMeUp
             ApplicationConfiguration.Initialize();
 
             // Démarrage
-            Application.Run();
+            Application.Run(new HomeSpace());
         }
     }
 }
