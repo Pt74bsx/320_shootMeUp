@@ -16,7 +16,6 @@ namespace ShootMeUp
         public HomeSpace()
         {
             InitializeComponent();
-
         }
 
         private void btnLeave_MouseHover(object sender, EventArgs e)
@@ -27,6 +26,11 @@ namespace ShootMeUp
         private void btnLeave_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCredit_Click(object sender, EventArgs e)
+        {
+            this.Hide();                        // Masque la fenêtre d'accueil
         }
     }
 }

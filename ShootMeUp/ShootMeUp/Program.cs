@@ -12,6 +12,9 @@ namespace ShootMeUp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+            // Initialisation des fenêtres
+            SpaceManager.Initialize();
+
             // Démarrage
             Application.Run(new HomeSpace());
         }
