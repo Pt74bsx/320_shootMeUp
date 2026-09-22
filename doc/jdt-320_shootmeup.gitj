@@ -236,6 +236,46 @@
       "description": "Notation du travail effectuer durant le 18.09.2026 ",
       "duration": 15,
       "status": "Done"
+    },
+    {
+      "id": "b1a24eea-a371-4bf6-81c0-55e21ca2301e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-22T12:15:00.000Z",
+      "name": "feat(code): Ajout d'un système de gestion de fenêtre",
+      "description": "Système qui facilite le masquage et affichage de différentes fenêtres",
+      "duration": 20,
+      "status": "Done"
+    },
+    {
+      "id": "cc6ec1f7-be5f-4da3-a774-61ec62f081ea",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-22T12:35:00.000Z",
+      "name": "feat(code): Ajout de la fenêtre crédit",
+      "description": "Fenêtre crédit avec bouton de retour qui change d'image au survol de la souris et au click masque la fenêtre de crédit et affiche la fenêtre d'accueil.",
+      "duration": 80,
+      "status": "Done"
+    },
+    {
+      "id": "6a923f89-a13e-4995-9da4-7e4a6af596ff",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-22T14:10:00.000Z",
+      "name": "feat(code): Ajout de la sorti de la fenêtre crédit via la touche ESC",
+      "description": "Si la touche ESC est détectée la fenêtre crédit se masque et la fenêtre d'accueil s'affiche.",
+      "duration": 20,
+      "status": "Done"
+    },
+    {
+      "id": "50daefcf-b064-476a-adec-037818ce101c",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-22T14:30:00.000Z",
+      "name": "chore(journal de travail): Ajout du travail réalisé le 22.09",
+      "description": "Notation dans le journal de travail tout ce qui a été réalisé comme travail afin de rattraper le manque de résultat du 18.09.2026",
+      "duration": 10,
+      "status": "Done"
     }
   ]
 }
