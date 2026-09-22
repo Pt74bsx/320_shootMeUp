@@ -19,7 +19,7 @@ namespace ShootMeUp.Properties {
     // à l'aide d'un outil, tel que ResGen ou Visual Studio.
     // Pour ajouter ou supprimer un membre, modifiez votre fichier .ResX, puis réexécutez ResGen
     // avec l'option /str ou régénérez votre projet VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -73,9 +73,19 @@ namespace ShootMeUp.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn_jouer {
+        internal static System.Drawing.Bitmap btn_credit {
             get {
-                object obj = ResourceManager.GetObject("btn-jouer", resourceCulture);
+                object obj = ResourceManager.GetObject("btn_credit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_leave {
+            get {
+                object obj = ResourceManager.GetObject("btn_leave", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +96,16 @@ namespace ShootMeUp.Properties {
         internal static System.Drawing.Bitmap btn_out {
             get {
                 object obj = ResourceManager.GetObject("btn_out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_over_credit {
+            get {
+                object obj = ResourceManager.GetObject("btn_over_credit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +133,9 @@ namespace ShootMeUp.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn_quitter {
+        internal static System.Drawing.Bitmap btn_over_play {
             get {
-                object obj = ResourceManager.GetObject("btn-quitter", resourceCulture);
+                object obj = ResourceManager.GetObject("btn_over_play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +143,29 @@ namespace ShootMeUp.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap drone {
+        internal static System.Drawing.Bitmap btn_over_settings {
             get {
-                object obj = ResourceManager.GetObject("drone", resourceCulture);
+                object obj = ResourceManager.GetObject("btn_over_settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_play {
+            get {
+                object obj = ResourceManager.GetObject("btn_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_settings {
+            get {
+                object obj = ResourceManager.GetObject("btn_settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
