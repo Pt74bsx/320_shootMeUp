@@ -18,30 +18,32 @@ namespace ShootMeUp
             InitializeComponent();
         }
 
-        private void btnCredit_Click(object sender, EventArgs e)
+        // Jouer
+        private void btnPlay_MouseHover(object sender, EventArgs e)
+        {
+            btnPlay.BackgroundImage = Properties.Resources.btn_over_play;                  // Image au survol 
+        }
+
+        private void btnPlay_MouseLeave(object sender, EventArgs e)
+        {
+            btnPlay.BackgroundImage = Properties.Resources.btn_play;                       // Image d'origine 
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
         {
             this.Hide();                        // Masque la fenêtre d'accueil
-            SpaceManager.Credit.Show();         // Affiche la fenêtre de crédit
+            SpaceManager.Game.Show();           // Affiche la fenêtre de jeux
         }
 
-        private void btnCredit_MouseHover(object sender, EventArgs e)
-        {
-            btnCredit.BackgroundImage = Properties.Resources.btn_over_credit;        // Image au survol 
-        }
-
-        private void btnCredit_MouseLeave(object sender, EventArgs e)
-        {
-            btnCredit.BackgroundImage = Properties.Resources.btn_credit;             // Image d'origine 
-        }
-
+        // Quitter
         private void btnLeave_MouseHover(object sender, EventArgs e)
         {
-            btnLeave.BackgroundImage = Properties.Resources.btn_over_leave;          // Image au survol 
+            btnLeave.BackgroundImage = Properties.Resources.btn_over_leave;                // Image au survol 
         }
 
         private void btnLeave_MouseLeave(object sender, EventArgs e)
         {
-            btnLeave.BackgroundImage = Properties.Resources.btn_leave;               // Image d'origine 
+            btnLeave.BackgroundImage = Properties.Resources.btn_leave;                     // Image d'origine 
         }
 
         private void btnLeave_Click(object sender, EventArgs e)
@@ -49,20 +51,32 @@ namespace ShootMeUp
             Application.Exit();
         }
 
-        private void btnPlay_MouseHover(object sender, EventArgs e)
+        // Crédit
+        private void btnCredit_MouseHover(object sender, EventArgs e)
         {
-            btnPlay.BackgroundImage = Properties.Resources.btn_over_play;          // Image au survol 
+            btnCredit.BackgroundImage = Properties.Resources.btn_over_credit;              // Image au survol 
         }
 
-        private void btnPlay_MouseLeave(object sender, EventArgs e)
+        private void btnCredit_MouseLeave(object sender, EventArgs e)
         {
-            btnPlay.BackgroundImage = Properties.Resources.btn_play;               // Image d'origine 
+            btnCredit.BackgroundImage = Properties.Resources.btn_credit;                   // Image d'origine 
         }
 
-        private void btnPlay_Click(object sender, EventArgs e)
+        private void btnCredit_Click(object sender, EventArgs e)
         {
             this.Hide();                        // Masque la fenêtre d'accueil
-            SpaceManager.Game.Show();           // Affiche la fenêtre de jeux
+            SpaceManager.Credit.Show();         // Affiche la fenêtre de crédit
+        }
+
+        // Paramètre
+        private void btnSettings_MouseHover(object sender, EventArgs e)
+        {
+            btnSettings.BackgroundImage = Properties.Resources.btn_over_settings;          // Image au survol 
+        }
+
+        private void btnSettings_MouseLeave(object sender, EventArgs e)
+        {
+            btnSettings.BackgroundImage = Properties.Resources.btn_settings;               // Image d'origine 
         }
     }
 }
