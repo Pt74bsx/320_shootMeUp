@@ -31,6 +31,7 @@ namespace ShootMeUp
         private void btnCredit_Click(object sender, EventArgs e)
         {
             this.Hide();                        // Masque la fenêtre d'accueil
+            SpaceManager.Credit.Show();         // Affiche la fenêtre de crédit
         }
     }
 }
