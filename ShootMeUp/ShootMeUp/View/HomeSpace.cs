@@ -18,20 +18,20 @@ namespace ShootMeUp
             InitializeComponent();
         }
 
-        private void btnLeave_MouseHover(object sender, EventArgs e)
-        {
-            btnLeave.BackgroundImage = Resources.btn_over_leave;
-        }
-
-        private void btnLeave_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCredit_Click(object sender, EventArgs e)
         {
             this.Hide();                        // Masque la fenêtre d'accueil
             SpaceManager.Credit.Show();         // Affiche la fenêtre de crédit
+        }
+
+        private void btnCredit_MouseHover(object sender, EventArgs e)
+        {
+            btnCredit.BackgroundImage = Properties.Resources.btn_over_credit;        // Image au survol 
+        }
+
+        private void btnCredit_MouseLeave(object sender, EventArgs e)
+        {
+            btnCredit.BackgroundImage = Properties.Resources.btn_credit;             // Image d'origine 
         }
     }
 }

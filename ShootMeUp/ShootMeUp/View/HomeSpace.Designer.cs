@@ -34,14 +34,21 @@
             // 
             // btnCredit
             // 
-            btnCredit.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCredit.Location = new Point(638, 383);
+            btnCredit.BackColor = Color.Transparent;
+            btnCredit.BackgroundImage = Properties.Resources.btn_credit;
+            btnCredit.BackgroundImageLayout = ImageLayout.Zoom;
+            btnCredit.FlatAppearance.BorderSize = 0;
+            btnCredit.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCredit.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCredit.FlatStyle = FlatStyle.Flat;
+            btnCredit.Location = new Point(602, 355);
             btnCredit.Name = "btnCredit";
-            btnCredit.Size = new Size(55, 38);
+            btnCredit.Size = new Size(91, 65);
             btnCredit.TabIndex = 1;
-            btnCredit.Text = "Credit";
-            btnCredit.UseVisualStyleBackColor = true;
+            btnCredit.UseVisualStyleBackColor = false;
             btnCredit.Click += btnCredit_Click;
+            btnCredit.MouseLeave += btnCredit_MouseLeave;
+            btnCredit.MouseHover += btnCredit_MouseHover;
             // 
             // HomeSpace
             // 

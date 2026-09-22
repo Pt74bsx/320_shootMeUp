@@ -60,7 +60,7 @@ namespace ShootMeUp
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.drone, x, y, 50, 50);
+            drawingSpace.Graphics.DrawImage(Resources.btn_credit, x, y, 50, 50);
             drawingSpace.Graphics.DrawString($"{this}", TextHelpers.drawFont, TextHelpers.writingBrush, x + 5, y - 25);
         }
 
