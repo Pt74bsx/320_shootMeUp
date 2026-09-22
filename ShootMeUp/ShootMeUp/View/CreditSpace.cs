@@ -22,7 +22,7 @@ namespace ShootMeUp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_out_MouseClick(object sender, MouseEventArgs e)
+        private void btn_out_Click(object sender, EventArgs e)
         {
             this.Hide();                                                        // Masque la fenêtre de crédit
             SpaceManager.Home.Show();                                           // Affiche la fenêtre d'accueil

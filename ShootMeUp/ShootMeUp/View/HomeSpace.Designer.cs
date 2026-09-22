@@ -50,6 +50,9 @@
             btnCredit.TabIndex = 1;
             btnCredit.UseVisualStyleBackColor = false;
             btnCredit.Click += btnCredit_Click;
+            btnCredit.Enter += btnCredit_MouseHover;
+            btnCredit.Leave += btnCredit_MouseLeave;
+            btnCredit.MouseEnter += btnCredit_MouseHover;
             btnCredit.MouseLeave += btnCredit_MouseLeave;
             btnCredit.MouseHover += btnCredit_MouseHover;
             // 
@@ -68,6 +71,9 @@
             btnLeave.TabIndex = 2;
             btnLeave.UseVisualStyleBackColor = false;
             btnLeave.Click += btnLeave_Click;
+            btnLeave.Enter += btnLeave_MouseHover;
+            btnLeave.Leave += btnLeave_MouseLeave;
+            btnLeave.MouseEnter += btnLeave_MouseHover;
             btnLeave.MouseLeave += btnLeave_MouseLeave;
             btnLeave.MouseHover += btnLeave_MouseHover;
             // 
@@ -86,6 +92,9 @@
             btnPlay.TabIndex = 3;
             btnPlay.UseVisualStyleBackColor = false;
             btnPlay.Click += btnPlay_Click;
+            btnPlay.Enter += btnPlay_MouseHover;
+            btnPlay.Leave += btnPlay_MouseLeave;
+            btnPlay.MouseEnter += btnPlay_MouseHover;
             btnPlay.MouseLeave += btnPlay_MouseLeave;
             btnPlay.MouseHover += btnPlay_MouseHover;
             // 
@@ -103,6 +112,9 @@
             btnSettings.Size = new Size(91, 57);
             btnSettings.TabIndex = 4;
             btnSettings.UseVisualStyleBackColor = false;
+            btnSettings.Enter += btnSettings_MouseHover;
+            btnSettings.Leave += btnSettings_MouseLeave;
+            btnSettings.MouseEnter += btnSettings_MouseHover;
             btnSettings.MouseLeave += btnSettings_MouseLeave;
             btnSettings.MouseHover += btnSettings_MouseHover;
             // 

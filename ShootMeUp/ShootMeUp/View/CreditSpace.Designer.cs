@@ -47,7 +47,10 @@
             btn_out.Size = new Size(76, 65);
             btn_out.TabIndex = 0;
             btn_out.UseVisualStyleBackColor = false;
-            btn_out.MouseClick += btn_out_MouseClick;
+            btn_out.Click += btn_out_Click;
+            btn_out.Enter += btn_out_MouseHover;
+            btn_out.Leave += btn_out_MouseLeave;
+            btn_out.MouseEnter += btn_out_MouseHover;
             btn_out.MouseLeave += btn_out_MouseLeave;
             btn_out.MouseHover += btn_out_MouseHover;
             // 
