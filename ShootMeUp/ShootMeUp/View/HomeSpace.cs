@@ -48,5 +48,21 @@ namespace ShootMeUp
         {
             Application.Exit();
         }
+
+        private void btnPlay_MouseHover(object sender, EventArgs e)
+        {
+            btnPlay.BackgroundImage = Properties.Resources.btn_over_play;          // Image au survol 
+        }
+
+        private void btnPlay_MouseLeave(object sender, EventArgs e)
+        {
+            btnPlay.BackgroundImage = Properties.Resources.btn_play;               // Image d'origine 
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            this.Hide();                        // Masque la fenêtre d'accueil
+            SpaceManager.Game.Show();           // Affiche la fenêtre de jeux
+        }
     }
 }

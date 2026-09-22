@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeSpace));
             btnCredit = new Button();
             btnLeave = new Button();
+            btnPlay = new Button();
             SuspendLayout();
             // 
             // btnCredit
@@ -62,12 +63,30 @@
             btnLeave.FlatStyle = FlatStyle.Flat;
             btnLeave.Location = new Point(300, 313);
             btnLeave.Name = "btnLeave";
-            btnLeave.Size = new Size(211, 79);
+            btnLeave.Size = new Size(220, 80);
             btnLeave.TabIndex = 2;
             btnLeave.UseVisualStyleBackColor = false;
             btnLeave.Click += btnLeave_Click;
             btnLeave.MouseLeave += btnLeave_MouseLeave;
             btnLeave.MouseHover += btnLeave_MouseHover;
+            // 
+            // btnPlay
+            // 
+            btnPlay.BackColor = Color.Transparent;
+            btnPlay.BackgroundImage = Properties.Resources.btn_play;
+            btnPlay.BackgroundImageLayout = ImageLayout.Zoom;
+            btnPlay.FlatAppearance.BorderSize = 0;
+            btnPlay.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnPlay.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnPlay.FlatStyle = FlatStyle.Flat;
+            btnPlay.Location = new Point(300, 227);
+            btnPlay.Name = "btnPlay";
+            btnPlay.Size = new Size(220, 80);
+            btnPlay.TabIndex = 3;
+            btnPlay.UseVisualStyleBackColor = false;
+            btnPlay.Click += btnPlay_Click;
+            btnPlay.MouseLeave += btnPlay_MouseLeave;
+            btnPlay.MouseHover += btnPlay_MouseHover;
             // 
             // HomeSpace
             // 
@@ -76,6 +95,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnPlay);
             Controls.Add(btnLeave);
             Controls.Add(btnCredit);
             Name = "HomeSpace";
@@ -86,5 +106,6 @@
         #endregion
         private Button btnCredit;
         private Button btnLeave;
+        private Button btnPlay;
     }
 }
