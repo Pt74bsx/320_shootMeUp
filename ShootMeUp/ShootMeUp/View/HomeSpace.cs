@@ -33,5 +33,20 @@ namespace ShootMeUp
         {
             btnCredit.BackgroundImage = Properties.Resources.btn_credit;             // Image d'origine 
         }
+
+        private void btnLeave_MouseHover(object sender, EventArgs e)
+        {
+            btnLeave.BackgroundImage = Properties.Resources.btn_over_leave;          // Image au survol 
+        }
+
+        private void btnLeave_MouseLeave(object sender, EventArgs e)
+        {
+            btnLeave.BackgroundImage = Properties.Resources.btn_leave;               // Image d'origine 
+        }
+
+        private void btnLeave_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

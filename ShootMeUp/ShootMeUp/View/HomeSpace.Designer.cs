@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeSpace));
             btnCredit = new Button();
+            btnLeave = new Button();
             SuspendLayout();
             // 
             // btnCredit
@@ -50,6 +51,24 @@
             btnCredit.MouseLeave += btnCredit_MouseLeave;
             btnCredit.MouseHover += btnCredit_MouseHover;
             // 
+            // btnLeave
+            // 
+            btnLeave.BackColor = Color.Transparent;
+            btnLeave.BackgroundImage = Properties.Resources.btn_leave;
+            btnLeave.BackgroundImageLayout = ImageLayout.Zoom;
+            btnLeave.FlatAppearance.BorderSize = 0;
+            btnLeave.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnLeave.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnLeave.FlatStyle = FlatStyle.Flat;
+            btnLeave.Location = new Point(300, 313);
+            btnLeave.Name = "btnLeave";
+            btnLeave.Size = new Size(211, 79);
+            btnLeave.TabIndex = 2;
+            btnLeave.UseVisualStyleBackColor = false;
+            btnLeave.Click += btnLeave_Click;
+            btnLeave.MouseLeave += btnLeave_MouseLeave;
+            btnLeave.MouseHover += btnLeave_MouseHover;
+            // 
             // HomeSpace
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -57,6 +76,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLeave);
             Controls.Add(btnCredit);
             Name = "HomeSpace";
             Text = "HomeSpace";
@@ -65,5 +85,6 @@
 
         #endregion
         private Button btnCredit;
+        private Button btnLeave;
     }
 }
