@@ -47,5 +47,14 @@ namespace ShootMeUp
         {
             btn_out.BackgroundImage = Properties.Resources.btn_out;             // Image d'origine 
         }
+
+        private void CreditSpace_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Hide();
+                SpaceManager.Home.Show();
+            }
+        }
     }
 }

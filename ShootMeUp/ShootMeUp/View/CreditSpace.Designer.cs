@@ -59,8 +59,10 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_out);
+            KeyPreview = true;
             Name = "CreditSpace";
             Text = "CreditSpace";
+            KeyDown += CreditSpace_KeyDown;
             ResumeLayout(false);
         }
 
