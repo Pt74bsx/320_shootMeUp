@@ -196,6 +196,46 @@
       "description": "Ajout de toutes les tâches effectuées durant la séquence N°2 (inscription des tâches au fur et à mesure)",
       "duration": 15,
       "status": "Done"
+    },
+    {
+      "id": "87fda00d-b0d8-465a-8b83-5a011d1a2c7e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-18T11:10:00.000Z",
+      "name": "chore(code)",
+      "description": "Remplacement des noms drones de la base de code par pinguins",
+      "duration": 30,
+      "status": "Done"
+    },
+    {
+      "id": "f052d208-0046-4784-8af4-8689e98d7c1d",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-18T11:40:00.000Z",
+      "name": "meet(code)",
+      "description": "Disscution avec le chef de projet pour l'écran d'accueil du jeux",
+      "duration": 60,
+      "status": "Done"
+    },
+    {
+      "id": "33f3e8da-1557-435a-9fbc-3645e26d016e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-18T13:00:00.000Z",
+      "name": "feat(code)",
+      "description": "Création de l'écran d'accueil avec bouton, etc. Gros problème sur les animations du bouton au survol, j'ai exploré beaucoup de possibilités mais impossible en raison de la mauvaise gestion des images par Visual Studio (vu avec le chef de projet) mais cette expérience m'a quand même permis de bien découvrir les diverses possibilités de la boîte à outils pour créer différentes vues.",
+      "duration": 95,
+      "status": "Done"
+    },
+    {
+      "id": "83cdabde-0301-42ef-b4d0-62dfa1571b2e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-22T12:00:00.000Z",
+      "name": "chore(journal de travail)",
+      "description": "Notation du travail effectuer durant le 18.09.2026 ",
+      "duration": 15,
+      "status": "Done"
     }
   ]
 }
