@@ -16,7 +16,7 @@ namespace ShootMeUp
             SpaceManager.Initialize();
 
             // Démarrage
-            Application.Run(new HomeSpace());
+            Application.Run(SpaceManager.Home);
         }
     }
 }
