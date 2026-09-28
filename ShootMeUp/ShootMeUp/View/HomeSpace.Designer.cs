@@ -32,7 +32,6 @@
             btnCredit = new Button();
             btnLeave = new Button();
             btnPlay = new Button();
-            btnSettings = new Button();
             SuspendLayout();
             // 
             // btnCredit
@@ -44,7 +43,7 @@
             btnCredit.FlatAppearance.MouseDownBackColor = Color.Transparent;
             btnCredit.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCredit.FlatStyle = FlatStyle.Flat;
-            btnCredit.Location = new Point(602, 355);
+            btnCredit.Location = new Point(673, 355);
             btnCredit.Name = "btnCredit";
             btnCredit.Size = new Size(91, 65);
             btnCredit.TabIndex = 1;
@@ -98,26 +97,6 @@
             btnPlay.MouseLeave += btnPlay_MouseLeave;
             btnPlay.MouseHover += btnPlay_MouseHover;
             // 
-            // btnSettings
-            // 
-            btnSettings.BackColor = Color.Transparent;
-            btnSettings.BackgroundImage = Properties.Resources.btn_settings;
-            btnSettings.BackgroundImageLayout = ImageLayout.Zoom;
-            btnSettings.FlatAppearance.BorderSize = 0;
-            btnSettings.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnSettings.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Location = new Point(681, 359);
-            btnSettings.Name = "btnSettings";
-            btnSettings.Size = new Size(91, 57);
-            btnSettings.TabIndex = 4;
-            btnSettings.UseVisualStyleBackColor = false;
-            btnSettings.Enter += btnSettings_MouseHover;
-            btnSettings.Leave += btnSettings_MouseLeave;
-            btnSettings.MouseEnter += btnSettings_MouseHover;
-            btnSettings.MouseLeave += btnSettings_MouseLeave;
-            btnSettings.MouseHover += btnSettings_MouseHover;
-            // 
             // HomeSpace
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -125,7 +104,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnSettings);
             Controls.Add(btnPlay);
             Controls.Add(btnLeave);
             Controls.Add(btnCredit);
@@ -138,6 +116,5 @@
         private Button btnCredit;
         private Button btnLeave;
         private Button btnPlay;
-        private Button btnSettings;
     }
 }

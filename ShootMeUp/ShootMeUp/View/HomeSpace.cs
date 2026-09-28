@@ -67,16 +67,5 @@ namespace ShootMeUp
             this.Hide();                        // Masque la fenêtre d'accueil
             SpaceManager.Credit.Show();         // Affiche la fenêtre de crédit
         }
-
-        // Paramètre
-        private void btnSettings_MouseHover(object sender, EventArgs e)
-        {
-            btnSettings.BackgroundImage = Properties.Resources.btn_over_settings;          // Image au survol 
-        }
-
-        private void btnSettings_MouseLeave(object sender, EventArgs e)
-        {
-            btnSettings.BackgroundImage = Properties.Resources.btn_settings;               // Image d'origine 
-        }
     }
 }
