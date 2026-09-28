@@ -296,6 +296,16 @@
       "description": "",
       "duration": 5,
       "status": "Done"
+    },
+    {
+      "id": "8e592c72-027a-46ff-bf97-b6015140b2c7",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-28T13:45:00.000Z",
+      "name": "feat(code): Ajout du système de navigation avec les flêches directionnels ",
+      "description": "Possibilité de naviguer dans le menu d'accueil et de crédit via les fleches directionnel ainsi que la sélections des boutons avec ENTER et les retours en arrière avec SUPP ou ESC",
+      "duration": 40,
+      "status": "Done"
     }
   ]
 }
