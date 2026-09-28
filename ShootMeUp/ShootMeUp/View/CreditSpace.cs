@@ -15,6 +15,7 @@ namespace ShootMeUp
         public CreditSpace()
         {
             InitializeComponent();
+            new NavigationManager(this, new List<Button> { btn_out }, btn_out.PerformClick);
         }
 
         /// <summary>

@@ -16,6 +16,7 @@ namespace ShootMeUp
         public HomeSpace()
         {
             InitializeComponent();
+            new NavigationManager(this, new List<Button> { btnPlay, btnLeave, btnCredit });
         }
 
         // Jouer

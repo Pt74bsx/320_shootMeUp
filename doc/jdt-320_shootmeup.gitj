@@ -286,6 +286,16 @@
       "description": "Correction du problème de la double création de fenêtre HomeSpace au démarrage ",
       "duration": 5,
       "status": "Done"
+    },
+    {
+      "id": "556357e7-7814-4ad6-b746-58b4a8911a71",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-28T13:40:00.000Z",
+      "name": "fix(code): suppression du bouton paramètre",
+      "description": "",
+      "duration": 5,
+      "status": "Done"
     }
   ]
 }
