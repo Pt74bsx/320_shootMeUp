@@ -276,6 +276,16 @@
       "description": "Notation dans le journal de travail tout ce qui a été réalisé comme travail afin de rattraper le manque de résultat du 18.09.2026",
       "duration": 10,
       "status": "Done"
+    },
+    {
+      "id": "e6eb4429-4c69-4cc3-a3b6-7b8a1b8e7b48",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-09-28T13:34:00.000Z",
+      "name": "fix(code): correction fenêtre HomeSpace",
+      "description": "Correction du problème de la double création de fenêtre HomeSpace au démarrage ",
+      "duration": 5,
+      "status": "Done"
     }
   ]
 }
