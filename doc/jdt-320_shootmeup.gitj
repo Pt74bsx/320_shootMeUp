@@ -396,6 +396,16 @@
       "description": "- boulle de neige\r\n- Animation de tirs du pingouin",
       "duration": 5,
       "status": "Done"
+    },
+    {
+      "id": "0396cd91-91e7-4488-896a-6d736c9c178c",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-06T14:00:00.000Z",
+      "name": "feat(code): Ajout du model Snowball",
+      "description": "Le modèle Snowball est le projectile que lance le pingouin. Dans le fichier de configuration, il est possible de modifier la taille et la vitesse de la boulle de neige.",
+      "duration": 30,
+      "status": "Done"
     }
   ]
 }
