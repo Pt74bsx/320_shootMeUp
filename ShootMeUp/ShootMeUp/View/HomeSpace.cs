@@ -18,7 +18,7 @@ namespace ShootMeUp
             InitializeComponent();
             new NavigationManager(this, new List<Button> { btnPlay, btnLeave, btnCredit });
 
-            this.Size = new System.Drawing.Size(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT);     // Taille de la fenêtre
+            ResponsiveHelpers.ConfigureScreen(this);
         }
 
         // Jouer

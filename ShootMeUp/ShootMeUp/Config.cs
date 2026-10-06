@@ -12,6 +12,12 @@ namespace ShootMeUp
         public const int SCREEN_WIDTH = 1200;
         public const int SCREEN_HEIGHT = 600;
 
+        public const int SCREEN_MIN_WIDTH = 960;
+        public const int SCREEN_MIN_HEIGHT = 540;
+
+        public const int SCREEN_MAX_WIDTH = 1920;
+        public const int SCREEN_MAX_HEIGHT = 1080;
+
         // Pinguin
         public const float SPEED = 220f;        // Vitesse du pinguin
 

@@ -1,4 +1,4 @@
-namespace ShootMeUp
+﻿namespace ShootMeUp
 {
     public partial class GameSpace : Form
     {
@@ -14,6 +14,7 @@ namespace ShootMeUp
         public GameSpace()
         {
             InitializeComponent();
+            ResponsiveHelpers.ConfigureScreen(this);
             DoubleBuffered = true;
 
             components ??= new System.ComponentModel.Container();
