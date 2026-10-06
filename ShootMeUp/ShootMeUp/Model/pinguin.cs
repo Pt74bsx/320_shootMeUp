@@ -62,16 +62,23 @@ namespace ShootMeUp
         public void Shoot()
         {
             shootPinguin = true;
+            Stop();
         }
 
         public void Render(BufferedGraphics drawingSpace)
         {
             Image picture = Resources.pinguin;
 
-            if (MouvPinguin == StateMouvPinguin.LEFT)
+            if (shootPinguin)
+            {
+                picture = Resources.pinguinShoot;
+            }
+
+            else if (MouvPinguin == StateMouvPinguin.LEFT)
             {
                 picture = Resources.pinguinLeft;
             } 
+
             else if (MouvPinguin == StateMouvPinguin.RIGHT)
             {
                 picture = Resources.pinguinRight;
