@@ -306,6 +306,86 @@
       "description": "Possibilité de naviguer dans le menu d'accueil et de crédit via les fleches directionnel ainsi que la sélections des boutons avec ENTER et les retours en arrière avec SUPP ou ESC",
       "duration": 40,
       "status": "Done"
+    },
+    {
+      "id": "b82e9e52-9764-4952-a17f-ffafa9ed693b",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T11:10:00.000Z",
+      "name": "chore(ressources): Ajout de ressources",
+      "description": "Ajout des images du pinguin pendant déplacement gauche, droite, à l'arret et l'image de la map",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "7bf82ba6-5476-46a6-8671-efeee8d877eb",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T11:15:00.000Z",
+      "name": "feat(code): Ajout du système de déplacement",
+      "description": "image du pinguin qui change quand le pinguin va à gauche pareille pour le cotés droite et si le pinguin arrive en bordure de map son déplacement est stoppé. Sécurité pour que seulement une touche sois exécutée et vitesse modifiable dans le code",
+      "duration": 120,
+      "status": "Done"
+    },
+    {
+      "id": "279c6586-ef0e-42a9-935e-546556515ad9",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T13:30:00.000Z",
+      "name": "feat(code): Ajout d'un fichier de configuration",
+      "description": "Fichier qui permet de configurer plusieurs paramètre de jeux comme la vitesse de déplacement taille de la fenêtre et plusieurs autres options dans le futur ",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "4ba54d60-807d-4158-97b4-843eb1595072",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T13:35:00.000Z",
+      "name": "feat(code): Ajout de la configuration de la vitesse de déplacement",
+      "description": "Dans le fichier de configuration, la vitesse de déplacement du personnage principal est gérable",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "257d3d39-10ec-44b9-a070-7a86656acd5c",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T13:40:00.000Z",
+      "name": "feat(code): Ajout de la configuration de la taille du pinguin",
+      "description": "Dans le fichier de configuration, la taille de l'image du personnage principal est réglable (largeur, hauteur)",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "42efed3b-09b2-49e5-ac42-2262fcea51c8",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T13:45:00.000Z",
+      "name": "feat(code): Ajout de la configuration de la taille des fenetres",
+      "description": "Dans le fichier de configuration, la taille de la fenêtre de jeux est modifiable (largeur, hauteur)",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "242e2d9d-a295-4e37-85ee-b613a554b4b2",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-02T13:50:00.000Z",
+      "name": "feat(code): Ajout système responsive avec configuration des tailles d'éc… …ran",
+      "description": "Dans le fichier de configuration, la taille minimal, maximal de toutes fenêtre est réglable. Boutons des menus s'adaptent automatiquement à la taille de la fenêtre grâce à leurs position fixe sur une grille. Tous les calcules sont géré via un helper ",
+      "duration": 45,
+      "status": "Done"
+    },
+    {
+      "id": "39f15161-424a-4da0-a7e0-40e0548e5194",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-06T13:10:00.000Z",
+      "name": "chore(journal de travail): Ajout du travail réalisé le 02.10.26",
+      "description": "Ajout de chaque tâches réalisées durant la séquence du 02.10.26. Les tâches n'ont pas été notées, car je n'ai pas eu le temps durant la séquence.",
+      "duration": 10,
+      "status": "Done"
     }
   ]
 }
