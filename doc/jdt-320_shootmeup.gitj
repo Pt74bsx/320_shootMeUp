@@ -406,6 +406,16 @@
       "description": "Le modèle Snowball est le projectile que lance le pingouin. Dans le fichier de configuration, il est possible de modifier la taille et la vitesse de la boulle de neige.",
       "duration": 30,
       "status": "Done"
+    },
+    {
+      "id": "f4e16a21-4bb0-4b51-b86f-2818b4fb038a",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-06T14:30:00.000Z",
+      "name": "fit(code): Préparation du système de tirs",
+      "description": "Quand un tirs est déclenché, une variable passe en vrai, stop le déplacement du pingouin et affiche l'image de tirs du pingouin",
+      "duration": 5,
+      "status": "Done"
     }
   ]
 }
