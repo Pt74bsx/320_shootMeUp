@@ -5,8 +5,6 @@ namespace ShootMeUp
 {
     public class Pinguin
     {
-        private const float SPEED = 220f;
-
         public const int PINGUIN_WIDTH = 180;
         public const int PINGUIN_HEIGHT = 140;
 
@@ -27,11 +25,11 @@ namespace ShootMeUp
         {
             if (MouvPinguin == StateMouvPinguin.LEFT)
             {
-                x -= SPEED * elapsedTime;
+                x -= Config.SPEED * elapsedTime;
             }
             else if (MouvPinguin == StateMouvPinguin.RIGHT)
             {
-                x += SPEED * elapsedTime;
+                x += Config.SPEED * elapsedTime;
             }
 
             if (x > screenWidth - PINGUIN_WIDTH)

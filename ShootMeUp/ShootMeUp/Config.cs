@@ -8,5 +8,6 @@ namespace ShootMeUp
 {
     internal static class Config
     {
+        public const float SPEED = 220f;        // Vitesse du pinguin
     }
 }
