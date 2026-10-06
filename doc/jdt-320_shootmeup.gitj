@@ -386,6 +386,16 @@
       "description": "Ajout de chaque tâches réalisées durant la séquence du 02.10.26. Les tâches n'ont pas été notées, car je n'ai pas eu le temps durant la séquence.",
       "duration": 10,
       "status": "Done"
+    },
+    {
+      "id": "fc2376d2-307f-4efb-9e70-ec9cea5b7213",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-06T13:30:00.000Z",
+      "name": "chore(ressources): Ajout de ressources",
+      "description": "- boulle de neige\r\n- Animation de tirs du pingouin",
+      "duration": 5,
+      "status": "Done"
     }
   ]
 }
