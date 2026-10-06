@@ -416,6 +416,26 @@
       "description": "Quand un tirs est déclenché, une variable passe en vrai, stop le déplacement du pingouin et affiche l'image de tirs du pingouin",
       "duration": 5,
       "status": "Done"
+    },
+    {
+      "id": "679d719a-0411-4905-b406-e70453041850",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-06T14:35:00.000Z",
+      "name": "feat(code): Ajout du système de tirs",
+      "description": "List pour pouvoir avoir plusieurs boulle de neige, sécurité sur le tirs pendant déplacement, boulle de neige détruite si elle sort de l'axe y ",
+      "duration": 50,
+      "status": "Done"
+    },
+    {
+      "id": "070d38cf-4106-4bea-85e6-54a1bc07491e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-06T15:20:00.000Z",
+      "name": "chore(journal de travail): Mise a jour du journal de travail ",
+      "description": "Notation du travail réaliser durant le 06.10.26 ",
+      "duration": 15,
+      "status": "Done"
     }
   ]
 }
