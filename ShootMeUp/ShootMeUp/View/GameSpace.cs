@@ -1,65 +1,159 @@
 namespace ShootMeUp
 {
-    // La classe AirSpace repr�sente le territoire au dessus duquel les drones peuvent voler
-    // Il s'agit d'un formulaire (une fen�tre) qui montre une vue 2D depuis en dessus
-    // Il n'y a donc pas de notion d'altitude qui intervient
-
     public partial class GameSpace : Form
     {
-        public static readonly int WIDTH = 1200;        // Dimensions of the airspace
-        public static readonly int HEIGHT = 600;
+        public const int SCREEN_WIDTH = 1200;
+        public const int SCREEN_HEIGHT = 600;
 
-        // La flotte est l'ensemble des drones qui �voluent dans notre espace a�rien
-        private Pinguin _player;
+        private readonly Pinguin _player = new Pinguin((SCREEN_WIDTH - Pinguin.PINGUIN_WIDTH) / 2, SCREEN_HEIGHT - Pinguin.PINGUIN_HEIGHT);
+        private readonly System.Diagnostics.Stopwatch _clock = new System.Diagnostics.Stopwatch();
 
-        BufferedGraphicsContext currentContext;
-        BufferedGraphics airspace;
+        private bool _keyA = false;
+        private bool _keyLeft = false;
+        private bool _keyD = false;
+        private bool _keyRight = false;
+        private bool _stopRequested = false;
 
-        // Initialisation de l'espace a�rien avec un certain nombre de drones
         public GameSpace()
         {
             InitializeComponent();
-            ClientSize = new Size(WIDTH, HEIGHT);
+            DoubleBuffered = true;
 
-            // Gets a reference to the current BufferedGraphicsContext
-            currentContext = BufferedGraphicsManager.Current;
-            // Creates a BufferedGraphics instance associated with this form, and with
-            // dimensions the same size as the drawing surface of the form.
-            airspace = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
-            this._player = new Pinguin(10,10,"Joe");
+            components ??= new System.ComponentModel.Container();
+            System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer(components);
+            gameTimer.Interval = 16;
+            gameTimer.Tick += GameTimer_Tick;
+            Deactivate += GameSpace_Deactivate;
+
+            _clock.Start();
+            gameTimer.Start();
         }
 
-        // Affichage de la situation actuelle
-        private void Render()
+        protected override void OnPaintBackground(PaintEventArgs e)
         {
-            airspace.Graphics.Clear(Color.AliceBlue);
-
-            _player.Render(airspace);
-
-            airspace.Render();
         }
 
-        // Calcul du nouvel �tat apr�s que 'interval' millisecondes se sont �coul�es
-        private void Update(int interval)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            _player.Update(interval);
+            base.OnPaint(e);
+
+            if (ClientSize.Width <= 0 || ClientSize.Height <= 0)
+                return;
+
+            using (BufferedGraphics airspace = BufferedGraphicsManager.Current.Allocate(e.Graphics, ClientRectangle))
+            {
+                airspace.Graphics.Clear(Color.AliceBlue);
+                airspace.Graphics.DrawImage(Properties.Resources.gameMape, ClientRectangle);
+                _player.Render(airspace);
+                airspace.Render(e.Graphics);
+            }
         }
 
-        // M�thode appel�e � chaque frame
-        private void NewFrame(object sender, EventArgs e)
+        private void GameTimer_Tick(object? sender, EventArgs e)
         {
-            this.Update(ticker.Interval);
-            this.Render();
+            float elapsedTime = (float)_clock.Elapsed.TotalSeconds;
+            _clock.Restart();
+
+            if (elapsedTime > 0.1f)
+            {
+                elapsedTime = 0.1f;
+            }
+
+            if (_stopRequested)
+            {
+                _player.Stop();
+                _stopRequested = false;
+            }
+            else if ((_keyA || _keyLeft) && !(_keyD || _keyRight))
+            {
+                _player.GoLeft();
+            }
+            else if ((_keyD || _keyRight) && !(_keyA || _keyLeft))
+            {
+                _player.GoRight();
+            }
+            else
+            {
+                _player.Stop();
+            }
+
+            _player.Update(elapsedTime, ClientSize.Width);
+            Invalidate();
         }
 
-        private void AirSpace_KeyDown(object sender, KeyEventArgs e)
+        private void GameSpace_Resize(object? sender, EventArgs e)
+        {
+            _player.Update(0, ClientSize.Width);
+            _player.y = ClientSize.Height - Pinguin.PINGUIN_HEIGHT;
+            Invalidate();
+        }
+
+        private void GameSpace_KeyDown(object? sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
-                case Keys.Space:
-                    _player.ChangeDirection();
+                case Keys.A:
+                    _keyA = true;
                     break;
+
+                case Keys.Left:
+                    _keyLeft = true;
+                    break;
+
+                case Keys.D:
+                    _keyD = true;
+                    break;
+
+                case Keys.Right:
+                    _keyRight = true;
+                    break;
+
+                default:
+                    return;
             }
+
+            e.SuppressKeyPress = true;
+        }
+
+        private void GameSpace_KeyUp(object? sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.A:
+                    _keyA = false;
+                    break;
+
+                case Keys.Left:
+                    _keyLeft = false;
+                    break;
+
+                case Keys.D:
+                    _keyD = false;
+                    break;
+
+                case Keys.Right:
+                    _keyRight = false;
+                    break;
+
+                default:
+                    return;
+            }
+
+            _player.Stop();
+            _stopRequested = true;
+            e.SuppressKeyPress = true;
+            Refresh();
+        }
+
+        private void GameSpace_Deactivate(object? sender, EventArgs e)
+        {
+            _keyA = false;
+            _keyLeft = false;
+            _keyD = false;
+            _keyRight = false;
+            _player.Stop();
+            _stopRequested = true;
+            Invalidate();
         }
     }
 }

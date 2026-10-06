@@ -1,19 +1,12 @@
-﻿namespace ShootMeUp
+namespace ShootMeUp
 {
     partial class GameSpace
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private System.ComponentModel.IContainer? components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && components != null)
             {
                 components.Dispose();
             }
@@ -22,35 +15,27 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            ticker = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // ticker
+            // GameSpace
             // 
-            ticker.Enabled = true;
-            ticker.Tick += NewFrame;
-            // 
-            // AirSpace
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(284, 261);
-            Name = "AirSpace";
-            Text = "AirSpace";
-            KeyDown += AirSpace_KeyDown;
+            AutoScaleMode = AutoScaleMode.None;
+            BackColor = Color.AliceBlue;
+            BackgroundImage = Properties.Resources.gameMape;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1200, 600);
+            Cursor = Cursors.Cross;
+            KeyPreview = true;
+            Name = "GameSpace";
+            Text = "GameSpace";
+            KeyDown += GameSpace_KeyDown;
+            KeyUp += GameSpace_KeyUp;
+            Resize += GameSpace_Resize;
             ResumeLayout(false);
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer ticker;
     }
 }

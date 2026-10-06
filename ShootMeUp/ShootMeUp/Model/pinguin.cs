@@ -1,75 +1,81 @@
-﻿using ShootMeUp.Helpers;
 using ShootMeUp.Properties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace ShootMeUp
 {
-    // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
     public class Pinguin
     {
-        public int charge;                            // La charge actuelle de la batterie
-        public string name;                           // Un nom
-        public int x;                                 // Position en X depuis la gauche de l'espace aérien
-        public int y;                                 // Position en Y depuis le haut de l'espace aérien
-        public int speed_x;                           // Déplacement horizontal
-        public int speed_y;
-        // Déplacement vertical
-        private Random _alea = new Random();
+        private const float SPEED = 220f;
 
-        // Constructeur
-        public Pinguin(int x, int y, string name)
+        public const int PINGUIN_WIDTH = 180;
+        public const int PINGUIN_HEIGHT = 140;
+
+        public enum StateMouvPinguin { LEFT, FIX, RIGHT }
+
+        public float x;
+        public int y;
+
+        public StateMouvPinguin MouvPinguin { get; private set;  } = StateMouvPinguin.FIX;
+
+        public Pinguin(int x, int y)
         {
-            Random alea = new Random();
             this.x = x;
             this.y = y;
-            this.name = name;
-            charge = alea.Next(1000); // La charge initiale de la batterie est choisie aléatoirement
-            ChangeDirection();
         }
 
-        // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
-        // que 'interval' millisecondes se sont écoulées
-        public void Update(int interval)
+        public void Update(float elapsedTime, int screenWidth)
         {
-            x += speed_x;
-            y += speed_y;
-            charge--;
+            if (MouvPinguin == StateMouvPinguin.LEFT)
+            {
+                x -= SPEED * elapsedTime;
+            }
+            else if (MouvPinguin == StateMouvPinguin.RIGHT)
+            {
+                x += SPEED * elapsedTime;
+            }
+
+            if (x > screenWidth - PINGUIN_WIDTH)
+            {
+                x = screenWidth - PINGUIN_WIDTH;
+                MouvPinguin = StateMouvPinguin.FIX;
+            }
+
+            if (x < 0)
+            {
+                x = 0;
+                MouvPinguin = StateMouvPinguin.FIX;
+            }
         }
 
-        // Choisit une nouvelle vitesse aléatoirement
-        public void ChangeDirection()
+        public void GoLeft()
         {
-            speed_x = _alea.Next(-3, 4);
-            speed_y = _alea.Next(-3, 4);
+            MouvPinguin = StateMouvPinguin.LEFT;
         }
 
-        /// //////////////////////////////////////////////////////////////////////////////
-        //  
-        //  Ce qui suit appartient à la vue, pas au modèle.
-        //  Il aurait été préférable de séparer la déclaration de la classe Drone en deux,
-        //  Nous regroupons tout ici pour simplifier
-        //  
-        /// //////////////////////////////////////////////////////////////////////////////
+        public void GoRight()
+        {
+            MouvPinguin = StateMouvPinguin.RIGHT;
+        }
 
-        private Pen droneBrush = new Pen(new SolidBrush(Color.Purple), 3);
+        public void Stop()
+        {
+            MouvPinguin = StateMouvPinguin.FIX;
+        }
 
-        // De manière graphique
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.btn_credit, x, y, 50, 50);
-            drawingSpace.Graphics.DrawString($"{this}", TextHelpers.drawFont, TextHelpers.writingBrush, x + 5, y - 25);
+            Image picture = Resources.pinguin;
+
+            if (MouvPinguin == StateMouvPinguin.LEFT)
+            {
+                picture = Resources.pinguinLeft;
+            } 
+            else if (MouvPinguin == StateMouvPinguin.RIGHT)
+            {
+                picture = Resources.pinguinRight;
+            }
+
+            drawingSpace.Graphics.DrawImage(picture, x, y, PINGUIN_WIDTH, PINGUIN_HEIGHT);
         }
-
-        // De manière textuelle
-        public override string ToString()
-        {
-            return $"{name} ({((int)((double)charge / 1000 * 100)).ToString()}%)";
-        }
-
-
     }
 }
