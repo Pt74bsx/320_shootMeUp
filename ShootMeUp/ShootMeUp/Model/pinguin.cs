@@ -5,9 +5,6 @@ namespace ShootMeUp
 {
     public class Pinguin
     {
-        public const int PINGUIN_WIDTH = 180;
-        public const int PINGUIN_HEIGHT = 140;
-
         public enum StateMouvPinguin { LEFT, FIX, RIGHT }
 
         public float x;
@@ -32,9 +29,9 @@ namespace ShootMeUp
                 x += Config.SPEED * elapsedTime;
             }
 
-            if (x > screenWidth - PINGUIN_WIDTH)
+            if (x > screenWidth - Config.PINGUIN_WIDTH)
             {
-                x = screenWidth - PINGUIN_WIDTH;
+                x = screenWidth - Config.PINGUIN_WIDTH;
                 MouvPinguin = StateMouvPinguin.FIX;
             }
 
@@ -73,7 +70,7 @@ namespace ShootMeUp
                 picture = Resources.pinguinRight;
             }
 
-            drawingSpace.Graphics.DrawImage(picture, x, y, PINGUIN_WIDTH, PINGUIN_HEIGHT);
+            drawingSpace.Graphics.DrawImage(picture, x, y, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
         }
     }
 }

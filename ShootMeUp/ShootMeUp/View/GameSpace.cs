@@ -5,7 +5,7 @@ namespace ShootMeUp
         public const int SCREEN_WIDTH = 1200;
         public const int SCREEN_HEIGHT = 600;
 
-        private readonly Pinguin _player = new Pinguin((SCREEN_WIDTH - Pinguin.PINGUIN_WIDTH) / 2, SCREEN_HEIGHT - Pinguin.PINGUIN_HEIGHT);
+        private readonly Pinguin _player = new Pinguin((SCREEN_WIDTH - Config.PINGUIN_WIDTH) / 2, SCREEN_HEIGHT - Config.PINGUIN_HEIGHT);
         private readonly System.Diagnostics.Stopwatch _clock = new System.Diagnostics.Stopwatch();
 
         private bool _keyA = false;
@@ -84,7 +84,7 @@ namespace ShootMeUp
         private void GameSpace_Resize(object? sender, EventArgs e)
         {
             _player.Update(0, ClientSize.Width);
-            _player.y = ClientSize.Height - Pinguin.PINGUIN_HEIGHT;
+            _player.y = ClientSize.Height - Config.PINGUIN_HEIGHT;
             Invalidate();
         }
 
