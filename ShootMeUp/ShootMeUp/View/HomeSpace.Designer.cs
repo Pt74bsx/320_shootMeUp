@@ -103,7 +103,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1184, 761);
             Controls.Add(btnPlay);
             Controls.Add(btnLeave);
             Controls.Add(btnCredit);

@@ -2,10 +2,7 @@ namespace ShootMeUp
 {
     public partial class GameSpace : Form
     {
-        public const int SCREEN_WIDTH = 1200;
-        public const int SCREEN_HEIGHT = 600;
-
-        private readonly Pinguin _player = new Pinguin((SCREEN_WIDTH - Config.PINGUIN_WIDTH) / 2, SCREEN_HEIGHT - Config.PINGUIN_HEIGHT);
+        private readonly Pinguin _player = new Pinguin((Config.SCREEN_WIDTH - Config.PINGUIN_WIDTH) / 2, Config.SCREEN_HEIGHT - Config.PINGUIN_HEIGHT);
         private readonly System.Diagnostics.Stopwatch _clock = new System.Diagnostics.Stopwatch();
 
         private bool _keyA = false;
