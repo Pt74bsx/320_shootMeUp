@@ -10,6 +10,8 @@ namespace ShootMeUp
         public float x;
         public int y;
 
+        public bool shootPinguin = false;
+
         public StateMouvPinguin MouvPinguin { get; private set;  } = StateMouvPinguin.FIX;
 
         public Pinguin(int x, int y)
@@ -55,6 +57,11 @@ namespace ShootMeUp
         public void Stop()
         {
             MouvPinguin = StateMouvPinguin.FIX;
+        }
+
+        public void Shoot()
+        {
+            shootPinguin = true;
         }
 
         public void Render(BufferedGraphics drawingSpace)

@@ -11,6 +11,9 @@
         private bool _keyRight = false;
         private bool _stopRequested = false;
 
+        private bool _keySpaceBar = false;
+        private bool _keyLeftClick = false;
+
         public GameSpace()
         {
             InitializeComponent();
@@ -70,6 +73,10 @@
             {
                 _player.GoRight();
             }
+            else if ((_keySpaceBar || _keyLeftClick) && !(_keyA || _keyLeft || _keyD || _keyRight))
+            {
+                _player.Shoot();
+            }
             else
             {
                 _player.Stop();
@@ -106,6 +113,14 @@
                     _keyRight = true;
                     break;
 
+                case Keys.Space:
+                    _keySpaceBar = true;
+                    break;
+
+                case Keys.Select:
+                    _keyLeftClick = true;
+                    break;
+
                 default:
                     return;
             }
@@ -133,6 +148,14 @@
                     _keyRight = false;
                     break;
 
+                case Keys.Space:
+                    _keySpaceBar = false;
+                    break;
+
+                case Keys.Select:
+                    _keyLeftClick = false;
+                    break;
+
                 default:
                     return;
             }
@@ -149,6 +172,8 @@
             _keyLeft = false;
             _keyD = false;
             _keyRight = false;
+            _keySpaceBar = false;
+            _keyLeftClick = false;
             _player.Stop();
             _stopRequested = true;
             Invalidate();
