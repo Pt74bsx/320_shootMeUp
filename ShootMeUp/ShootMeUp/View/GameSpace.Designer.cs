@@ -32,6 +32,7 @@ namespace ShootMeUp
             Text = "GameSpace";
             KeyDown += GameSpace_KeyDown;
             KeyUp += GameSpace_KeyUp;
+            MouseDown += GameSpace_MouseDown;
             Resize += GameSpace_Resize;
             ResumeLayout(false);
         }

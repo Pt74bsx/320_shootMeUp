@@ -29,5 +29,8 @@ namespace ShootMeUp
 
         public const int SNOWBALL_WIDTH = 90;               // Largeur de la boulle de neige 
         public const int SNOWBALL_HEIGHT = 90;              // Hauteur de la boulle de neige 
+
+        public const int SHOOT_TIME = 150;                  // Temps de tirs du personnage (ms)
+        public const int SHOOT_COOLDOWN = 1000;             // Cooldown entre chaque tirs  (ms)
     }
 }
