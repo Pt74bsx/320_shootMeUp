@@ -6,6 +6,8 @@
 
         private readonly List<Snowball> _snowballs = new List<Snowball>();
 
+        private readonly List<Protection> _protection = new List<Protection>();
+
         private readonly System.Diagnostics.Stopwatch _clock = new System.Diagnostics.Stopwatch();
 
         private bool _keyA = false;
@@ -35,6 +37,30 @@
 
             _clock.Start();
             gameTimer.Start();
+
+            for (int i = 0; i < 5; i++)
+            {
+                _protection.Add(new Protection(0, 0));
+            }
+
+            PositionProtections();
+        }
+
+        private void PositionProtections()
+        {
+            if (_protection.Count < 5)
+                return;
+
+            int w = ClientSize.Width;
+            int pw = Config.PROTECTION_WIDTH;
+
+            int y = ClientSize.Height - Config.PINGUIN_HEIGHT - Config.PROTECTION_HEIGHT - 20;
+
+            _protection[0].SetPosition(w / 10 - pw / 2, y);
+            _protection[1].SetPosition(w * 3 / 10 - pw / 2, y - 50);
+            _protection[2].SetPosition((w - pw) / 2, y);
+            _protection[3].SetPosition(w * 7 / 10 - pw / 2, y - 50);
+            _protection[4].SetPosition(w * 9 / 10 - pw / 2, y);
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -57,6 +83,11 @@
                 foreach (Snowball snowball in _snowballs)
                 {
                     snowball.Render(airspace);
+                }
+
+                foreach (Protection protection in _protection)
+                {
+                    protection.Render(airspace);
                 }
 
                 airspace.Render(e.Graphics);
@@ -156,6 +187,8 @@
         {
             _player.Update(0, ClientSize.Width);
             _player.y = ClientSize.Height - Config.PINGUIN_HEIGHT;
+
+            PositionProtections();
             Invalidate();
         }
 

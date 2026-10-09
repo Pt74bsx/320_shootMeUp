@@ -26,7 +26,8 @@ namespace ShootMeUp
 
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.snowball, x, y, Config.SNOWBALL_WIDTH, Config.SNOWBALL_HEIGHT);
+            //float ratio = y / Config.SCREEN_HEIGHT;
+            drawingSpace.Graphics.DrawImage(Resources.snowball, x, y, Config.SNOWBALL_WIDTH /** ratio*/, Config.SNOWBALL_HEIGHT /** ratio*/);
         }
     }
 }

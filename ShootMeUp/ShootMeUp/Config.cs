@@ -32,5 +32,9 @@ namespace ShootMeUp
 
         public const int SHOOT_TIME = 150;                  // Temps de tirs du personnage (ms)
         public const int SHOOT_COOLDOWN = 1000;             // Cooldown entre chaque tirs  (ms)
+
+        // Protections de glaces 
+        public const int PROTECTION_WIDTH = 90;            // Largeur de la protection 
+        public const int PROTECTION_HEIGHT = 90;           // Hauteur de la protection
     }
 }
