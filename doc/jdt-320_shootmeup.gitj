@@ -436,6 +436,46 @@
       "description": "Notation du travail réaliser durant le 06.10.26 ",
       "duration": 15,
       "status": "Done"
+    },
+    {
+      "id": "c0d0cbbb-585e-450b-9102-00c5db5cecef",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-09T11:10:00.000Z",
+      "name": "feat(code): Ajout des protections",
+      "description": "Positionnement et affichage des protections faites mais pas fini",
+      "duration": 65,
+      "status": "Done"
+    },
+    {
+      "id": "d97cc8b2-090b-4193-83fc-637242442c86",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-09T12:15:00.000Z",
+      "name": "feat(code): Finalisation du système de protection",
+      "description": "Protection finie, avec une image par état de la protection ",
+      "duration": 60,
+      "status": "Done"
+    },
+    {
+      "id": "04759afa-b605-4e6f-9f10-4c7f7dd0d771",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-09T13:30:00.000Z",
+      "name": "chore(analyse): Plannification du système d'ennemis",
+      "description": "Avec l'aide de l'IA j'ai plannifié comment j'allais coder le système d'ennemis et j'ai égalemment générer 8 images par ennemis afin d'avoir de belle annimation de tirs, de déplacement et de sur place. ",
+      "duration": 30,
+      "status": "Done"
+    },
+    {
+      "id": "ca9eaae1-903e-4fd5-8254-59a132aac1d8",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-09T14:10:00.000Z",
+      "name": "chore(journal de travail): Mise à jours du journal de travail",
+      "description": "Notation des tâches effectuées durant la séquence du 09.10.2026",
+      "duration": 20,
+      "status": "Done"
     }
   ]
 }
