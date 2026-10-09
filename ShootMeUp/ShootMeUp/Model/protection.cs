@@ -32,7 +32,47 @@ namespace ShootMeUp
             this.y = y;
         }
 
-        
+        public bool touched(Snowball snowBall)
+        {
+            int margeBloc = 15;
+            int margeBoule = 30;
+
+            // Condition générée par IA (temporaire)
+            if (snowBall.x + Config.SNOWBALL_WIDTH - margeBoule > x + margeBloc &&
+                snowBall.x + margeBoule < x + Config.PROTECTION_WIDTH - margeBloc &&
+                snowBall.y + Config.SNOWBALL_HEIGHT - margeBoule > y + margeBloc &&
+                snowBall.y + margeBoule < y + Config.PROTECTION_HEIGHT - margeBloc)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool loseLife()
+        {
+            if (LevelProtection == StateProtection.FULL)
+            {
+                LevelProtection = StateProtection.HIGH;
+            }
+
+            else if (LevelProtection == StateProtection.HIGH)
+            {
+                LevelProtection = StateProtection.MEDIUM;
+            }
+
+            else if (LevelProtection == StateProtection.MEDIUM)
+            {
+                LevelProtection = StateProtection.LOW;
+            }
+
+            else if (LevelProtection == StateProtection.LOW)
+            {
+                return true;
+            }
+
+            return false;
+        }
 
         /// <summary>
         /// Affichage de la protection selon son état 

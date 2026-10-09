@@ -132,6 +132,28 @@
             {
                 _snowballs[i].Update(elapsedTime);
 
+                bool touched = false;
+
+                for (int j = _protection.Count - 1; j >= 0; j--)
+                {
+                    if (_protection[j].touched(_snowballs[i])) 
+                    {
+                        if (_protection[j].loseLife())
+                        {
+                            _protection.RemoveAt(j);
+                        }
+
+                        _snowballs.RemoveAt(i);
+                        touched = true;
+                        break;
+                    }
+                }
+
+                if (touched)
+                {
+                    continue;
+                }
+
                 if (_snowballs[i].y + Config.SNOWBALL_HEIGHT < 0)
                 {
                     _snowballs.RemoveAt(i);
