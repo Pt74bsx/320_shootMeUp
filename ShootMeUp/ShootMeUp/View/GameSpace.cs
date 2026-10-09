@@ -30,7 +30,6 @@
             System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer(components);
             gameTimer.Interval = 16;
             gameTimer.Tick += GameTimer_Tick;
-            Cursor.Hide();
 
             Deactivate += GameSpace_Deactivate;
             MouseDown += GameSpace_MouseDown;

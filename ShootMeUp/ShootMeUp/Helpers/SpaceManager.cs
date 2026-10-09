@@ -20,6 +20,9 @@ namespace ShootMeUp
             Home = new HomeSpace();
             Credit = new CreditSpace();
             Game = new GameSpace();
+
+            Game.Activated += (sender, e) => Cursor.Hide();
+            Game.Deactivate += (sender, e) => Cursor.Show();
         }
     }
 }
