@@ -1,4 +1,4 @@
-﻿using ShootMeUp.Properties;
+using ShootMeUp.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,8 @@ namespace ShootMeUp
 {
     public class Snowball
     {
+        private static readonly Image _snowballImage = ImageHelper.ResizeImage(Resources.snowball, Config.SNOWBALL_WIDTH, Config.SNOWBALL_HEIGHT);
+
         public float x;
         public float y;
 
@@ -27,7 +29,11 @@ namespace ShootMeUp
         public void Render(BufferedGraphics drawingSpace)
         {
             //float ratio = y / Config.SCREEN_HEIGHT;
-            drawingSpace.Graphics.DrawImage(Resources.snowball, x, y, Config.SNOWBALL_WIDTH /** ratio*/, Config.SNOWBALL_HEIGHT /** ratio*/);
+            drawingSpace.Graphics.DrawImage(_snowballImage, x, y, Config.SNOWBALL_WIDTH /** ratio*/, Config.SNOWBALL_HEIGHT /** ratio*/);
         }
     }
 }
+
+
+
+

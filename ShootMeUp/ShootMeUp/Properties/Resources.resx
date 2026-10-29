@@ -181,4 +181,76 @@
   <data name="protection-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\protection-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="golem_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

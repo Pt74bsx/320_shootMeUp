@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,5 +36,27 @@ namespace ShootMeUp
         // Protections de glaces 
         public const int PROTECTION_WIDTH = 90;            // Largeur de la protection 
         public const int PROTECTION_HEIGHT = 90;           // Hauteur de la protection
+
+        // Ennemis
+        public const int ENEMY_WIDTH = 80;                 // Largeur des ennemis
+        public const int ENEMY_HEIGHT = 80;                // Hauteur des ennemis
+
+        // Grille 
+        public const int ENEMY_COLUMNS = 4;                // Nombre de colonnes
+        public const int ENEMY_ROWS = 3;                   // Nombre de lignes
+
+        public const int ENEMY_START_COUNT = 5;            // Nombre d'ennemis au départ
+        public const int ENEMY_MAX_COUNT = 7;              // Nombre maximum d'ennemis
+
+        public const float ENEMY_MOVE_TIME = 3f;           // Cooldown du déplacement
+        public const float ENEMY_SPEED = SPEED;            // Vitesse identique au pinguin
+
+        public const float ENEMY_SHOOT_COOLDOWN = 3f;      // Cooldown tirs
+        public const float ENEMY_SHOOT_TIME = 0.6f;        // Temps de tirs
+
+        public const int ENEMY_PROJECTILE_WIDTH = 16;      // Largeur
+        public const int ENEMY_PROJECTILE_HEIGHT = 26;     // Hauteur 
+
+        public const float ENEMY_PROJECTILE_SPEED = 160f;  // Vitesse du projectile 
     }
 }

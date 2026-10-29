@@ -1,4 +1,4 @@
-﻿using ShootMeUp.Properties;
+using ShootMeUp.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +11,16 @@ namespace ShootMeUp
 {
     public class Protection
     {
+        private static readonly Image _protectionFull = ImageHelper.ResizeImage(Resources.protection_4, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionHigh = ImageHelper.ResizeImage(Resources.protection_3, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionMedium = ImageHelper.ResizeImage(Resources.protection_2, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionLow = ImageHelper.ResizeImage(Resources.protection_1, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
         private int x;
         private int y;
 
         public enum StateProtection { FULL, HIGH, MEDIUM, LOW }
 
         public StateProtection LevelProtection { get; private set; } = StateProtection.FULL;
-
-        
 
         public Protection(int x, int y)
         {
@@ -37,7 +39,7 @@ namespace ShootMeUp
             int margeBloc = 15;
             int margeBoule = 30;
 
-            // Condition générée par IA (temporaire)
+            // IA : Calcule 
             if (snowBall.x + Config.SNOWBALL_WIDTH - margeBoule > x + margeBloc &&
                 snowBall.x + margeBoule < x + Config.PROTECTION_WIDTH - margeBloc &&
                 snowBall.y + Config.SNOWBALL_HEIGHT - margeBoule > y + margeBloc &&
@@ -78,23 +80,24 @@ namespace ShootMeUp
         /// Affichage de la protection selon son état 
         /// </summary>
         /// <param name="drawingSpace"></param>
+
         public void Render(BufferedGraphics drawingSpace)
         {
             if (LevelProtection == StateProtection.FULL)
             {
-                drawingSpace.Graphics.DrawImage(Resources.protection_4, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+                drawingSpace.Graphics.DrawImage(_protectionFull, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
             }
             else if (LevelProtection == StateProtection.HIGH)
             {
-                drawingSpace.Graphics.DrawImage(Resources.protection_3, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+                drawingSpace.Graphics.DrawImage(_protectionHigh, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
             }
             else if (LevelProtection == StateProtection.MEDIUM)
             {
-                drawingSpace.Graphics.DrawImage(Resources.protection_2, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+                drawingSpace.Graphics.DrawImage(_protectionMedium, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
             }
             else if (LevelProtection == StateProtection.LOW)
             {
-                drawingSpace.Graphics.DrawImage(Resources.protection_1, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+                drawingSpace.Graphics.DrawImage(_protectionLow, x, y, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
             }
         }
     }

@@ -2,6 +2,9 @@ namespace ShootMeUp
 {
     public partial class GameSpace : Form
     {
+        private readonly EnemyHelper _enemies = new EnemyHelper();
+        private Image? _background;
+
         private readonly Pinguin _player = new Pinguin((Config.SCREEN_WIDTH - Config.PINGUIN_WIDTH) / 2, Config.SCREEN_HEIGHT - Config.PINGUIN_HEIGHT);
 
         private readonly List<Snowball> _snowballs = new List<Snowball>();
@@ -36,6 +39,7 @@ namespace ShootMeUp
             gameTimer.Tick += GameTimer_Tick;
 
             Deactivate += GameSpace_Deactivate;
+            Disposed += GameSpace_Disposed;
 
             _clock.Start();
             gameTimer.Start();
@@ -45,6 +49,7 @@ namespace ShootMeUp
                 _protection.Add(new Protection(0, 0));
             }
 
+            _enemies.Reset();
             PositionProtections();
         }
 
@@ -77,11 +82,26 @@ namespace ShootMeUp
             if (ClientSize.Width <= 0 || ClientSize.Height <= 0)
                 return;
 
+            // IA : réutiliser le fond jusqu'au redimensionnement
+            if (_background == null || _background.Size != ClientSize)
+            {
+                if (_background != null)
+                {
+                    _background.Dispose();
+                }
+                _background = ImageHelper.ResizeImage(Properties.Resources.gameMape, ClientSize.Width, ClientSize.Height);
+            }
+
             using (BufferedGraphics airspace = BufferedGraphicsManager.Current.Allocate(e.Graphics, ClientRectangle))
             {
                 airspace.Graphics.Clear(Color.AliceBlue);
-                airspace.Graphics.DrawImage(Properties.Resources.gameMape, ClientRectangle);
+                airspace.Graphics.DrawImage(_background, ClientRectangle);
                 _player.Render(airspace);
+
+                foreach (Enemy enemy in _enemies.Enemies)
+                {
+                    enemy.Render(airspace, ClientSize.Width, ClientSize.Height);
+                }
 
                 foreach (Snowball snowball in _snowballs)
                 {
@@ -97,10 +117,34 @@ namespace ShootMeUp
             }
         }
 
+        private void GameSpace_Disposed(object? sender, EventArgs e)
+        {
+            if (_background != null)
+            {
+                _background.Dispose();
+            }
+        }
+
         private void GameTimer_Tick(object? sender, EventArgs e)
         {
             float elapsedTime = (float)_clock.Elapsed.TotalSeconds;
             _clock.Restart();
+
+            // pause si le jeu est psa actif
+            if (!Visible || !ContainsFocus)
+            {
+                return;
+            }
+
+            UpdateGame(elapsedTime);
+        }
+
+        public void UpdateGame(float elapsedTime)
+        {
+            if (elapsedTime <= 0)
+            {
+                return;
+            }
 
             if (elapsedTime > 0.1f)
             {
@@ -130,7 +174,16 @@ namespace ShootMeUp
             }
 
             _player.Update(elapsedTime, ClientSize.Width);
+            foreach (Enemy enemy in _enemies.Enemies)
+            {
+                enemy.UpdateAnimation(elapsedTime);
+            }
+            UpdateSnowballs(elapsedTime);
+            Invalidate();
+        }
 
+        private void UpdateSnowballs(float elapsedTime)
+        {
             for (int i = _snowballs.Count - 1; i >= 0; i--)
             {
                 _snowballs[i].Update(elapsedTime);
@@ -163,7 +216,6 @@ namespace ShootMeUp
                 }
             }
 
-            Invalidate();
         }
 
         private void MovePlayer()
@@ -202,9 +254,7 @@ namespace ShootMeUp
         private void CreateSnowball()
         {
             float x = _player.x + (Config.PINGUIN_WIDTH - Config.SNOWBALL_WIDTH) / 2;
-
             float y = _player.y;
-
             _snowballs.Add(new Snowball(x, y));
         }
 

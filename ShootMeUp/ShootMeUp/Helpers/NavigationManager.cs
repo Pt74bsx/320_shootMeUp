@@ -6,7 +6,6 @@ namespace ShootMeUp
 {
     internal class NavigationManager
     {
-        // Réécrit avec l'aide de l'IA : navigation avec des boutons et événements nommés.
         private Form fenetre;
         private List<Button> boutons;
         private Button? boutonRetour;
