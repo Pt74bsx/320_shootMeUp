@@ -128,6 +128,7 @@ namespace ShootMeUp
                     if (enemy.loseLife())
                     {
                         Enemies.RemoveAt(i);
+                        Reinforce();
                     }
                     return 0;
                 }
@@ -135,5 +136,13 @@ namespace ShootMeUp
             return -1;
         }
 
+
+        public void Reinforce()
+        {
+            if (Enemies.Count <= 2)
+            {
+                AddEnemies(5);
+            }
+        }
     }
 }
