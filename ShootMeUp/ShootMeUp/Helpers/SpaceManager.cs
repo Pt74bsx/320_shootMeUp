@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +20,18 @@ namespace ShootMeUp
             Home = new HomeSpace();
             Credit = new CreditSpace();
             Game = new GameSpace();
+            Game.Activated += JeuActive;
+            Game.Deactivate += JeuDesactive;
+        }
 
-            Game.Activated += (sender, e) => Cursor.Hide();
-            Game.Deactivate += (sender, e) => Cursor.Show();
+        private static void JeuActive(object? sender, EventArgs e)
+        {
+            Cursor.Hide();
+        }
+
+        private static void JeuDesactive(object? sender, EventArgs e)
+        {
+            Cursor.Show();
         }
     }
 }

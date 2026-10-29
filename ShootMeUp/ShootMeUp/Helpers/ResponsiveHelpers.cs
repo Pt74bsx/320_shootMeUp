@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,6 +6,7 @@ namespace ShootMeUp
 {
     internal static class ResponsiveHelpers
     {
+        // IA : Modif du concepteur expliqués et code fourni pour le responsive
         public static void ConfigureScreen(Form form)
         {
             form.ClientSize = new Size(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT);

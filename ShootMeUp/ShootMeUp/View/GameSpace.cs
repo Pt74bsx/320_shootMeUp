@@ -1,4 +1,4 @@
-﻿namespace ShootMeUp
+namespace ShootMeUp
 {
     public partial class GameSpace : Form
     {
@@ -26,13 +26,16 @@
             ResponsiveHelpers.ConfigureScreen(this);
             DoubleBuffered = true;
 
-            components ??= new System.ComponentModel.Container();
+            if (components == null)
+            {
+                components = new System.ComponentModel.Container();
+            }
+
             System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer(components);
             gameTimer.Interval = 16;
             gameTimer.Tick += GameTimer_Tick;
 
             Deactivate += GameSpace_Deactivate;
-            MouseDown += GameSpace_MouseDown;
 
             _clock.Start();
             gameTimer.Start();
@@ -55,6 +58,7 @@
 
             int y = ClientSize.Height - Config.PINGUIN_HEIGHT - Config.PROTECTION_HEIGHT - 20;
 
+            // IA : calcule selon la taille de l'écran
             _protection[0].SetPosition(w / 10 - pw / 2, y);
             _protection[1].SetPosition(w * 3 / 10 - pw / 2, y - 50);
             _protection[2].SetPosition((w - pw) / 2, y);
@@ -271,7 +275,7 @@
             _player.Stop();
             _stopRequested = true;
             e.SuppressKeyPress = true;
-            Refresh();
+            Invalidate();
         }
 
         private void GameSpace_Deactivate(object? sender, EventArgs e)

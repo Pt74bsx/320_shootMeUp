@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,28 +6,24 @@ namespace ShootMeUp
 {
     internal class NavigationManager
     {
+        // Réécrit avec l'aide de l'IA : navigation avec des boutons et événements nommés.
         private Form fenetre;
         private List<Button> boutons;
-        private Action? retour;
+        private Button? boutonRetour;
         private bool curseurCache = false;
 
-        public NavigationManager(Form fenetre, List<Button> boutons, Action? retour = null)
+        public NavigationManager(Form fenetre, List<Button> boutons, Button? boutonRetour = null)
         {
             this.fenetre = fenetre;
             this.boutons = boutons;
-            this.retour = retour;
+            this.boutonRetour = boutonRetour;
 
             fenetre.KeyPreview = true;
             fenetre.KeyDown += TouchePressee;
             fenetre.MouseMove += SourisBouge;
 
-            fenetre.VisibleChanged += (s, e) =>
-            {
-                if (!fenetre.Visible)
-                    AfficherCurseur();
-            };
-
-            fenetre.Deactivate += (s, e) => AfficherCurseur();
+            fenetre.VisibleChanged += FenetreVisibleChangee;
+            fenetre.Deactivate += FenetreDesactivee;
 
             foreach (Button bouton in boutons)
             {
@@ -37,6 +33,19 @@ namespace ShootMeUp
 
             if (boutons.Count > 0)
                 fenetre.ActiveControl = boutons[0];
+        }
+
+        private void FenetreVisibleChangee(object? sender, EventArgs e)
+        {
+            if (!fenetre.Visible)
+            {
+                AfficherCurseur();
+            }
+        }
+
+        private void FenetreDesactivee(object? sender, EventArgs e)
+        {
+            AfficherCurseur();
         }
 
         private void AvantTouche(object? sender, PreviewKeyDownEventArgs e)
@@ -53,20 +62,25 @@ namespace ShootMeUp
         private void TouchePressee(object? sender, KeyEventArgs e)
         {
             // Échap ou Suppr : retour en arrière si possible
-            if ((e.KeyCode == Keys.Escape || e.KeyCode == Keys.Back) && retour != null)
+            if ((e.KeyCode == Keys.Escape || e.KeyCode == Keys.Back) && boutonRetour != null)
             {
                 e.SuppressKeyPress = true;
                 AfficherCurseur();
-                retour();
+                boutonRetour.PerformClick();
             }
             // Entrée
-            else if (e.KeyCode == Keys.Enter &&
-                     fenetre.ActiveControl is Button bouton &&
-                     boutons.Contains(bouton))
+            else if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true;
-                AfficherCurseur();
-                bouton.PerformClick();
+                foreach (Button bouton in boutons)
+                {
+                    if (fenetre.ActiveControl == bouton)
+                    {
+                        e.SuppressKeyPress = true;
+                        AfficherCurseur();
+                        bouton.PerformClick();
+                        break;
+                    }
+                }
             }
             // Les flèches parcourent la liste de boutons
             else if (boutons.Count > 0 &&
@@ -79,8 +93,15 @@ namespace ShootMeUp
                     curseurCache = true;
                 }
 
-                int position = boutons.IndexOf(
-                    fenetre.ActiveControl as Button ?? boutons[0]);
+                int position = 0;
+                for (int i = 0; i < boutons.Count; i++)
+                {
+                    if (fenetre.ActiveControl == boutons[i])
+                    {
+                        position = i;
+                        break;
+                    }
+                }
 
                 if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Left)
                     position--;
@@ -102,8 +123,14 @@ namespace ShootMeUp
         {
             AfficherCurseur();
 
-            if (sender is Button bouton)
-                bouton.Focus();
+            foreach (Button bouton in boutons)
+            {
+                if (sender == bouton)
+                {
+                    bouton.Focus();
+                    break;
+                }
+            }
         }
 
         private void AfficherCurseur()

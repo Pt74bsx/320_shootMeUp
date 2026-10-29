@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +16,7 @@ namespace ShootMeUp
         {
             InitializeComponent();
             ResponsiveHelpers.ConfigureScreen(this);
-            new NavigationManager(this, new List<Button> { btn_out }, btn_out.PerformClick);
+            new NavigationManager(this, new List<Button> { btn_out }, btn_out); // que le bouton Retour est selectionnable
         }
 
         /// <summary>
