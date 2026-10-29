@@ -79,10 +79,22 @@ namespace ShootMeUp
             foreach (Enemy enemy in Enemies)
             {
                 enemy.UpdateAnimation(elapsedTime);
+                enemy.ShootCooldown -= elapsedTime;
 
                 if (enemy.IsMoving)
                 {
                     enemy.UpdateMovement(elapsedTime, screenWidth, screenHeight);
+                }
+
+                else if (enemy.ShootTime > 0)
+                {
+                    enemy.ShootTime -= elapsedTime;
+
+                    if (enemy.ShootTime <= 0)
+                    {
+                        CreateProjectile(enemy, screenWidth, screenHeight, player);
+                        enemy.ShootCooldown = Config.ENEMY_SHOOT_COOLDOWN;
+                    }
                 }
 
                 else
@@ -95,9 +107,9 @@ namespace ShootMeUp
                         enemy.MoveTime = Config.ENEMY_MOVE_TIME + _random.Next(2000) / 1000f;
                     }
 
-                    else if (!HasProjectile(enemy))
+                    else if (enemy.ShootCooldown <= 0 && !HasProjectile(enemy))
                     {
-                        CreateProjectile(enemy, screenWidth, screenHeight, player);
+                        enemy.ShootTime = Config.ENEMY_SHOOT_TIME;
                     }
                 }
             }
