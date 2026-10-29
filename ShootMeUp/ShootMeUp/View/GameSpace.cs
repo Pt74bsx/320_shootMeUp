@@ -103,6 +103,11 @@ namespace ShootMeUp
                     enemy.Render(airspace, ClientSize.Width, ClientSize.Height);
                 }
 
+                foreach (EnemyProjectile projectile in _enemies.Projectiles)
+                {
+                    projectile.Render(airspace);
+                }
+
                 foreach (Snowball snowball in _snowballs)
                 {
                     snowball.Render(airspace);
@@ -174,7 +179,7 @@ namespace ShootMeUp
             }
 
             _player.Update(elapsedTime, ClientSize.Width);
-            _enemies.Update(elapsedTime, ClientSize.Width, ClientSize.Height);
+            _enemies.Update(elapsedTime, ClientSize.Width, ClientSize.Height, _player);
             UpdateSnowballs(elapsedTime);
             Invalidate();
         }

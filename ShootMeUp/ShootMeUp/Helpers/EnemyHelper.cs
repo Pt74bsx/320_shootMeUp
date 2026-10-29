@@ -4,10 +4,12 @@ namespace ShootMeUp
     {
         private readonly Random _random = new Random();
         public List<Enemy> Enemies { get; private set; } = new List<Enemy>();
+        public List<EnemyProjectile> Projectiles { get; private set; } = new List<EnemyProjectile>();
 
         public void Reset()
         {
             Enemies.Clear();
+            Projectiles.Clear();
             AddEnemies(Config.ENEMY_START_COUNT);
         }
 
@@ -64,11 +66,12 @@ namespace ShootMeUp
             }
         }
 
-        public void Update(float elapsedTime, int screenWidth, int screenHeight)
+        public void Update(float elapsedTime, int screenWidth, int screenHeight, Pinguin player)
         {
             foreach (Enemy enemy in Enemies)
             {
                 enemy.UpdateAnimation(elapsedTime);
+
                 if (enemy.IsMoving)
                 {
                     enemy.UpdateMovement(elapsedTime, screenWidth, screenHeight);
@@ -76,10 +79,15 @@ namespace ShootMeUp
                 else
                 {
                     enemy.MoveTime -= elapsedTime;
+
                     if (enemy.MoveTime <= 0)
                     {
                         MoveEnemy(enemy);
                         enemy.MoveTime = Config.ENEMY_MOVE_TIME + _random.Next(2000) / 1000f;
+                    }
+                    else if (!HasProjectile(enemy))
+                    {
+                        CreateProjectile(enemy, screenWidth, screenHeight, player);
                     }
 
                 }
@@ -136,13 +144,33 @@ namespace ShootMeUp
             return -1;
         }
 
-
         public void Reinforce()
         {
             if (Enemies.Count <= 2)
             {
                 AddEnemies(5);
             }
+        }
+
+        private void CreateProjectile(Enemy enemy, int screenWidth, int screenHeight, Pinguin player)
+        {
+            Rectangle bounds = enemy.Bounds(screenWidth, screenHeight);
+            float x = bounds.X + (bounds.Width - Config.ENEMY_PROJECTILE_WIDTH) / 2;
+            float targetX = player.x + Config.PINGUIN_WIDTH / 2;
+            float targetY = player.y + Config.PINGUIN_HEIGHT / 2;
+            Projectiles.Add(new EnemyProjectile(x, bounds.Bottom, enemy, targetX, targetY));
+        }
+
+        private bool HasProjectile(Enemy enemy)
+        {
+            foreach (EnemyProjectile projectile in Projectiles)
+            {
+                if (projectile.Owner == enemy)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
