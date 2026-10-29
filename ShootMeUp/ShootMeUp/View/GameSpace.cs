@@ -181,6 +181,7 @@ namespace ShootMeUp
             _player.Update(elapsedTime, ClientSize.Width);
             _enemies.Update(elapsedTime, ClientSize.Width, ClientSize.Height, _player);
             UpdateSnowballs(elapsedTime);
+            UpdateEnemyProjectiles();
             Invalidate();
         }
 
@@ -194,7 +195,7 @@ namespace ShootMeUp
 
                 for (int j = _protection.Count - 1; j >= 0; j--)
                 {
-                    if (_protection[j].touched(_snowballs[i])) 
+                    if (_protection[j].touched(_snowballs[i]))
                     {
                         if (_protection[j].loseLife())
                         {
@@ -225,6 +226,21 @@ namespace ShootMeUp
                 }
             }
 
+        }
+
+        private void UpdateEnemyProjectiles()
+        {
+            for (int i = _enemies.Projectiles.Count - 1; i >= 0; i--)
+            {
+                EnemyProjectile projectile = _enemies.Projectiles[i];
+
+                if (projectile.y > ClientSize.Height ||
+                    projectile.x + Config.ENEMY_PROJECTILE_WIDTH < 0 || projectile.x > ClientSize.Width ||
+                    projectile.y + Config.ENEMY_PROJECTILE_HEIGHT < 0)
+                {
+                    _enemies.RemoveProjectile(i);
+                }
+            }
         }
 
         private void MovePlayer()

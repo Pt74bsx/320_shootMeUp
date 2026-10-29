@@ -3,7 +3,9 @@ namespace ShootMeUp
     public class EnemyHelper
     {
         private readonly Random _random = new Random();
+
         public List<Enemy> Enemies { get; private set; } = new List<Enemy>();
+
         public List<EnemyProjectile> Projectiles { get; private set; } = new List<EnemyProjectile>();
 
         public void Reset()
@@ -19,25 +21,27 @@ namespace ShootMeUp
             {
                 return false;
             }
+
             foreach (Enemy enemy in Enemies)
             {
                 if (enemy.Column == column && enemy.Row == row)
                 {
                     return false;
                 }
+
                 if (enemy.IsMoving && enemy.TargetColumn == column && enemy.TargetRow == row)
                 {
                     return false;
                 }
-
             }
+
             return true;
         }
-
 
         public void AddEnemies(int count)
         {
             List<Point> positions = new List<Point>();
+
             for (int row = 0; row < Config.ENEMY_ROWS; row++)
             {
                 for (int column = 0; column < Config.ENEMY_COLUMNS; column++)
@@ -57,10 +61,14 @@ namespace ShootMeUp
                 }
 
                 int index = _random.Next(positions.Count);
+
                 Point position = positions[index];
+
                 Enemy enemy = new Enemy(position.X, position.Y);
+
                 enemy.ShootCooldown = 2f + _random.Next(2000) / 1000f;
                 enemy.MoveTime = Config.ENEMY_MOVE_TIME + _random.Next(2000) / 1000f;
+
                 Enemies.Add(enemy);
                 positions.RemoveAt(index);
             }
@@ -76,6 +84,7 @@ namespace ShootMeUp
                 {
                     enemy.UpdateMovement(elapsedTime, screenWidth, screenHeight);
                 }
+
                 else
                 {
                     enemy.MoveTime -= elapsedTime;
@@ -85,14 +94,18 @@ namespace ShootMeUp
                         MoveEnemy(enemy);
                         enemy.MoveTime = Config.ENEMY_MOVE_TIME + _random.Next(2000) / 1000f;
                     }
+
                     else if (!HasProjectile(enemy))
                     {
                         CreateProjectile(enemy, screenWidth, screenHeight, player);
                     }
-
                 }
             }
 
+            foreach (EnemyProjectile projectile in Projectiles)
+            {
+                projectile.Update(elapsedTime);
+            }
         }
 
         private void MoveEnemy(Enemy enemy)
@@ -105,14 +118,17 @@ namespace ShootMeUp
             {
                 column--;
             }
+
             else if (direction == 1)
             {
                 column++;
             }
+
             else if (direction == 2)
             {
                 row++;
             }
+
             else
             {
                 row--;
@@ -131,6 +147,7 @@ namespace ShootMeUp
             for (int i = Enemies.Count - 1; i >= 0; i--)
             {
                 Enemy enemy = Enemies[i];
+
                 if (ball.IntersectsWith(enemy.Bounds(screenWidth, screenHeight)))
                 {
                     if (enemy.loseLife())
@@ -155,22 +172,31 @@ namespace ShootMeUp
         private void CreateProjectile(Enemy enemy, int screenWidth, int screenHeight, Pinguin player)
         {
             Rectangle bounds = enemy.Bounds(screenWidth, screenHeight);
+
             float x = bounds.X + (bounds.Width - Config.ENEMY_PROJECTILE_WIDTH) / 2;
             float targetX = player.x + Config.PINGUIN_WIDTH / 2;
             float targetY = player.y + Config.PINGUIN_HEIGHT / 2;
+
             Projectiles.Add(new EnemyProjectile(x, bounds.Bottom, enemy, targetX, targetY));
         }
 
         private bool HasProjectile(Enemy enemy)
         {
             foreach (EnemyProjectile projectile in Projectiles)
+
             {
                 if (projectile.Owner == enemy)
+
                 {
                     return true;
                 }
             }
             return false;
+        }
+
+        public void RemoveProjectile(int index)
+        {
+            Projectiles.RemoveAt(index);
         }
     }
 }

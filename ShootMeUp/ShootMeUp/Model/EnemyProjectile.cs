@@ -31,6 +31,12 @@ namespace ShootMeUp
             }
         }
 
+        public void Update(float elapsedTime)
+        {
+            x += _speedX * elapsedTime;
+            y += _speedY * elapsedTime;
+        }
+
         public void Render(BufferedGraphics drawingSpace)
         {
             // IA : effets transparents autour du projectile font pas partie de la collision
