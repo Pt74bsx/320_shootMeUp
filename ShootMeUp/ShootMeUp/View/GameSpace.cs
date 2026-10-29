@@ -174,10 +174,7 @@ namespace ShootMeUp
             }
 
             _player.Update(elapsedTime, ClientSize.Width);
-            foreach (Enemy enemy in _enemies.Enemies)
-            {
-                enemy.UpdateAnimation(elapsedTime);
-            }
+            _enemies.Update(elapsedTime, ClientSize.Width, ClientSize.Height);
             UpdateSnowballs(elapsedTime);
             Invalidate();
         }

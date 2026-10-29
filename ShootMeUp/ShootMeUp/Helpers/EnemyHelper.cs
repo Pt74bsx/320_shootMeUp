@@ -63,5 +63,57 @@ namespace ShootMeUp
                 positions.RemoveAt(index);
             }
         }
+
+        public void Update(float elapsedTime, int screenWidth, int screenHeight)
+        {
+            foreach (Enemy enemy in Enemies)
+            {
+                enemy.UpdateAnimation(elapsedTime);
+                if (enemy.IsMoving)
+                {
+                    enemy.UpdateMovement(elapsedTime, screenWidth, screenHeight);
+                }
+                else
+                {
+                    enemy.MoveTime -= elapsedTime;
+                    if (enemy.MoveTime <= 0)
+                    {
+                        MoveEnemy(enemy);
+                        enemy.MoveTime = Config.ENEMY_MOVE_TIME + _random.Next(2000) / 1000f;
+                    }
+
+                }
+            }
+
+        }
+
+        private void MoveEnemy(Enemy enemy)
+        {
+            int direction = _random.Next(4);
+            int column = enemy.Column;
+            int row = enemy.Row;
+
+            if (direction == 0)
+            {
+                column--;
+            }
+            else if (direction == 1)
+            {
+                column++;
+            }
+            else if (direction == 2)
+            {
+                row++;
+            }
+            else
+            {
+                row--;
+            }
+
+            if (IsFree(column, row))
+            {
+                enemy.Move(column, row, direction);
+            }
+        }
     }
 }

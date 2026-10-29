@@ -45,8 +45,8 @@ namespace ShootMeUp
                 imageHeight = 130;
                 bottomMargin = 0;
             }
-            drawingSpace.Graphics.DrawImage(EnemyImageHelper.GetImage(this),
-                position.X, position.Bottom - imageHeight + bottomMargin, position.Width, imageHeight);
+
+            drawingSpace.Graphics.DrawImage(EnemyImageHelper.GetImage(this), position.X, position.Bottom - imageHeight + bottomMargin, position.Width, imageHeight);
         }
 
         public Enemy(int column, int row)
@@ -58,13 +58,13 @@ namespace ShootMeUp
             Type = row;
         }
 
-
         public void Move(int column, int row, int direction)
         {
             if (IsMoving || ShootTime > 0)
             {
                 return;
             }
+
             TargetColumn = column;
             TargetRow = row;
             _moveDistance = 0;
@@ -72,12 +72,64 @@ namespace ShootMeUp
             Direction = direction;
         }
 
+        public void UpdateMovement(float elapsedTime, int screenWidth, int screenHeight)
+        {
+            if (!IsMoving)
+            {
+                return;
+            }
+
+            Point start = CellPosition(Column, Row, screenWidth, screenHeight);
+            Point target = CellPosition(TargetColumn, TargetRow, screenWidth, screenHeight);
+
+            // le déplacement est horizontal ou vertical
+            int distanceX = Math.Abs(target.X - start.X);
+            int distanceY = Math.Abs(target.Y - start.Y);
+            int distance = distanceX + distanceY;
+
+            _moveDistance += Config.ENEMY_SPEED * elapsedTime;
+
+            if (_moveDistance >= distance)
+            {
+                Column = TargetColumn;
+                Row = TargetRow;
+                _moveDistance = 0;
+                IsMoving = false;
+            }
+        }
+
         public Rectangle Bounds(int screenWidth, int screenHeight)
         {
             Point position = CellPosition(Column, Row, screenWidth, screenHeight);
+            if (IsMoving)
+            {
+                Point target = CellPosition(TargetColumn, TargetRow, screenWidth, screenHeight);
+                int distance = Math.Abs(target.X - position.X) + Math.Abs(target.Y - position.Y);
+                int moved = (int)_moveDistance;
+                if (moved > distance)
+                {
+                    moved = distance;
+                }
+
+                if (target.X > position.X)
+                {
+                    position.X += moved;
+                }
+                else if (target.X < position.X)
+                {
+                    position.X -= moved;
+                }
+                else if (target.Y > position.Y)
+                {
+                    position.Y += moved;
+                }
+                else
+                {
+                    position.Y -= moved;
+                }
+            }
             return new Rectangle(position.X, position.Y, Config.ENEMY_WIDTH, Config.ENEMY_HEIGHT);
         }
-
 
         private Point CellPosition(int column, int row, int screenWidth, int screenHeight)
         {
