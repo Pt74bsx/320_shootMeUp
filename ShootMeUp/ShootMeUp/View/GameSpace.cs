@@ -207,6 +207,13 @@ namespace ShootMeUp
                     continue;
                 }
 
+                int points = _enemies.HitBySnowball(_snowballs[i], ClientSize.Width, ClientSize.Height);
+                if (points >= 0)
+                {
+                    _snowballs.RemoveAt(i);
+                    continue;
+                }
+
                 if (_snowballs[i].y + Config.SNOWBALL_HEIGHT < 0)
                 {
                     _snowballs.RemoveAt(i);

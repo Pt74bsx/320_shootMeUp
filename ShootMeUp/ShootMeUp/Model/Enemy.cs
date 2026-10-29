@@ -11,6 +11,7 @@ namespace ShootMeUp
         private float _moveDistance;
 
         public int Type { get; private set; }
+        public int Lives { get; private set; }
 
         public float ShootCooldown { get; set; }
         public float ShootTime { get; set; }
@@ -56,6 +57,7 @@ namespace ShootMeUp
             TargetColumn = column;
             TargetRow = row;
             Type = row;
+            Lives = row + 1;
         }
 
         public void Move(int column, int row, int direction)
@@ -96,6 +98,15 @@ namespace ShootMeUp
                 _moveDistance = 0;
                 IsMoving = false;
             }
+        }
+
+        public bool loseLife()
+        {
+            if (Lives > 0)
+            {
+                Lives--;
+            }
+            return Lives == 0;
         }
 
         public Rectangle Bounds(int screenWidth, int screenHeight)

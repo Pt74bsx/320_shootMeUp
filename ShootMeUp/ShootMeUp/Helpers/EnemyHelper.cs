@@ -115,5 +115,19 @@ namespace ShootMeUp
                 enemy.Move(column, row, direction);
             }
         }
+        public int HitBySnowball(Snowball snowball, int screenWidth, int screenHeight)
+        {
+            Rectangle ball = new Rectangle((int)snowball.x + 30, (int)snowball.y + 30, Config.SNOWBALL_WIDTH - 60, Config.SNOWBALL_HEIGHT - 60);
+
+            foreach (Enemy enemy in Enemies)
+            {
+                if (ball.IntersectsWith(enemy.Bounds(screenWidth, screenHeight)))
+                {
+                    enemy.loseLife();
+                    return 0;
+                }
+            }
+            return -1;
+        }
     }
 }
