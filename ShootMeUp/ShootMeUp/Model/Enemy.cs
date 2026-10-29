@@ -59,6 +59,19 @@ namespace ShootMeUp
         }
 
 
+        public void Move(int column, int row, int direction)
+        {
+            if (IsMoving || ShootTime > 0)
+            {
+                return;
+            }
+            TargetColumn = column;
+            TargetRow = row;
+            _moveDistance = 0;
+            IsMoving = true;
+            Direction = direction;
+        }
+
         public Rectangle Bounds(int screenWidth, int screenHeight)
         {
             Point position = CellPosition(Column, Row, screenWidth, screenHeight);

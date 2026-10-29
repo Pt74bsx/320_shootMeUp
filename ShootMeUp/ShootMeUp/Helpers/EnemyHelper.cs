@@ -23,6 +23,10 @@ namespace ShootMeUp
                 {
                     return false;
                 }
+                if (enemy.IsMoving && enemy.TargetColumn == column && enemy.TargetRow == row)
+                {
+                    return false;
+                }
 
             }
             return true;
