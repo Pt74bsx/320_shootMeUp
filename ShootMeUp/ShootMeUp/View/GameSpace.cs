@@ -81,8 +81,16 @@ namespace ShootMeUp
             Health.loseLife();
             UpdateLabels();
 
+            if (Health.IsFinished)
+            {
+                _player.Stop();
+                _player.shootPinguin = false;
+                _isShoot = false;
+            }
+
             Invalidate();
         }
+
 
         private void UpdateLabels()
         {
@@ -156,7 +164,7 @@ namespace ShootMeUp
             _clock.Restart();
 
             // pause si le jeu est psa actif
-            if (!Visible || !ContainsFocus)
+            if (!Visible || !ContainsFocus || Health.IsFinished)
             {
                 return;
             }
@@ -166,7 +174,7 @@ namespace ShootMeUp
 
         public void UpdateGame(float elapsedTime)
         {
-            if (elapsedTime <= 0)
+            if (Health.IsFinished || elapsedTime <= 0)
             {
                 return;
             }
@@ -277,8 +285,13 @@ namespace ShootMeUp
                 {
                     _enemies.RemoveProjectile(i);
                 }
+                if (Health.IsFinished)
+                {
+                    break;
+                }
             }
         }
+
 
         private void MovePlayer()
         {
@@ -303,7 +316,7 @@ namespace ShootMeUp
 
         private void Shoot()
         {
-            if (_isShoot || _shootCooldown > 0)
+            if (Health.IsFinished || _isShoot || _shootCooldown > 0)
                 return;
 
             _player.Shoot();
