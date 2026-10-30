@@ -5,10 +5,10 @@ namespace ShootMeUp
 {
     public class Pinguin
     {
-        private static readonly Image _pinguinImage = ImageHelper.ResizeImage(Resources.pinguin, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
-        private static readonly Image _pinguinShootImage = ImageHelper.ResizeImage(Resources.pinguinShoot, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
-        private static readonly Image _pinguinLeftImage = ImageHelper.ResizeImage(Resources.pinguinLeft, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
-        private static readonly Image _pinguinRightImage = ImageHelper.ResizeImage(Resources.pinguinRight, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
+        private static readonly Image _pinguinImage = PictureHelper.ResizeImage(Resources.pinguin, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
+        private static readonly Image _pinguinShootImage = PictureHelper.ResizeImage(Resources.pinguinShoot, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
+        private static readonly Image _pinguinLeftImage = PictureHelper.ResizeImage(Resources.pinguinLeft, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
+        private static readonly Image _pinguinRightImage = PictureHelper.ResizeImage(Resources.pinguinRight, Config.PINGUIN_WIDTH, Config.PINGUIN_HEIGHT);
 
         public enum StateMouvPinguin { LEFT, FIX, RIGHT }
 

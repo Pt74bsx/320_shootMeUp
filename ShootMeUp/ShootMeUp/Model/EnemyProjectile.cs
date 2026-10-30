@@ -60,7 +60,7 @@ namespace ShootMeUp
                 offsetY = 0;
             }
 
-            drawingSpace.Graphics.DrawImage(EnemyImageHelper.GetProjectileImage(Owner.Type), x - offsetX, y - offsetY, width, height);
+            drawingSpace.Graphics.DrawImage(EnemyPictureHelper.GetProjectileImage(Owner.Type), x - offsetX, y - offsetY, width, height);
         }
 
         public Rectangle Bounds()

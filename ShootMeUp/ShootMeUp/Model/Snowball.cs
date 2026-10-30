@@ -10,7 +10,7 @@ namespace ShootMeUp
 {
     public class Snowball
     {
-        private static readonly Image _snowballImage = ImageHelper.ResizeImage(Resources.snowball, Config.SNOWBALL_WIDTH, Config.SNOWBALL_HEIGHT);
+        private static readonly Image _snowballImage = PictureHelper.ResizeImage(Resources.snowball, Config.SNOWBALL_WIDTH, Config.SNOWBALL_HEIGHT);
 
         public float x;
         public float y;

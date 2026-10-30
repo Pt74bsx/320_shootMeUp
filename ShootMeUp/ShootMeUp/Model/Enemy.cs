@@ -47,7 +47,7 @@ namespace ShootMeUp
                 bottomMargin = 0;
             }
 
-            drawingSpace.Graphics.DrawImage(EnemyImageHelper.GetImage(this), position.X, position.Bottom - imageHeight + bottomMargin, position.Width, imageHeight);
+            drawingSpace.Graphics.DrawImage(EnemyPictureHelper.GetImage(this), position.X, position.Bottom - imageHeight + bottomMargin, position.Width, imageHeight);
         }
 
         public Enemy(int column, int row)

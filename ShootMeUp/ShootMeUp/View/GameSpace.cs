@@ -2,6 +2,8 @@ namespace ShootMeUp
 {
     public partial class GameSpace : Form
     {
+        public HealthHelper Health { get; private set; } = new HealthHelper();
+
         private readonly EnemyHelper _enemies = new EnemyHelper();
         private Image? _background;
 
@@ -51,6 +53,7 @@ namespace ShootMeUp
 
             _enemies.Reset();
             PositionProtections();
+            UpdateLabels();
         }
 
         private void PositionProtections()
@@ -73,6 +76,13 @@ namespace ShootMeUp
             }
         }
 
+        private void UpdateLabels()
+        {
+            pbLife1.Visible = Health.Lives >= 1;
+            pbLife2.Visible = Health.Lives >= 2;
+            pbLife3.Visible = Health.Lives >= 3;
+        }
+
         protected override void OnPaintBackground(PaintEventArgs e)
         {
         }
@@ -91,7 +101,7 @@ namespace ShootMeUp
                 {
                     _background.Dispose();
                 }
-                _background = ImageHelper.ResizeImage(Properties.Resources.gameMape, ClientSize.Width, ClientSize.Height);
+                _background = PictureHelper.ResizeImage(Properties.Resources.gameMape, ClientSize.Width, ClientSize.Height);
             }
 
             using (BufferedGraphics airspace = BufferedGraphicsManager.Current.Allocate(e.Graphics, ClientRectangle))

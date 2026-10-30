@@ -11,10 +11,10 @@ namespace ShootMeUp
 {
     public class Protection
     {
-        private static readonly Image _protectionFull = ImageHelper.ResizeImage(Resources.protection_4, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
-        private static readonly Image _protectionHigh = ImageHelper.ResizeImage(Resources.protection_3, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
-        private static readonly Image _protectionMedium = ImageHelper.ResizeImage(Resources.protection_2, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
-        private static readonly Image _protectionLow = ImageHelper.ResizeImage(Resources.protection_1, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionFull = PictureHelper.ResizeImage(Resources.protection_4, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionHigh = PictureHelper.ResizeImage(Resources.protection_3, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionMedium = PictureHelper.ResizeImage(Resources.protection_2, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
+        private static readonly Image _protectionLow = PictureHelper.ResizeImage(Resources.protection_1, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
         private int x;
         private int y;
         private int _lives = 5;
