@@ -1,0 +1,7 @@
+Durant les période de projet de cette après midi
+
+- Estetique du label de score (ajouter le cadran)
+- Ecran de fin de partie (avec ses options : Relancer, affichage du score et quitter)
+- Journal de travail
+- Rapport
+- Release
