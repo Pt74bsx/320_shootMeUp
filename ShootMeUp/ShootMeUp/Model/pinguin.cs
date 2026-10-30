@@ -70,6 +70,12 @@ namespace ShootMeUp
             Stop();
         }
 
+        public bool touched(EnemyProjectile projectile)
+        {
+            Rectangle player = new Rectangle((int)x + 45, y + 20, Config.PINGUIN_WIDTH - 90, Config.PINGUIN_HEIGHT - 30);
+
+            return player.IntersectsWith(projectile.Bounds());
+        }
 
         public void Render(BufferedGraphics drawingSpace)
         {

@@ -76,6 +76,14 @@ namespace ShootMeUp
             }
         }
 
+        public void PlayerTouched()
+        {
+            Health.loseLife();
+            UpdateLabels();
+
+            Invalidate();
+        }
+
         private void UpdateLabels()
         {
             pbLife1.Visible = Health.Lives >= 1;
@@ -255,6 +263,12 @@ namespace ShootMeUp
                         touched = true;
                         break;
                     }
+                }
+
+                if (!touched && _player.touched(projectile))
+                {
+                    PlayerTouched();
+                    touched = true;
                 }
 
                 if (touched || projectile.y > ClientSize.Height ||
