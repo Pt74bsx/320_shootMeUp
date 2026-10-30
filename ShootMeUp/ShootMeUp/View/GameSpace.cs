@@ -46,7 +46,7 @@ namespace ShootMeUp
 
             for (int i = 0; i < 5; i++)
             {
-                _protection.Add(new Protection(0, 0));
+                _protection.Add(new Protection(0, 0, i));
             }
 
             _enemies.Reset();
@@ -55,20 +55,22 @@ namespace ShootMeUp
 
         private void PositionProtections()
         {
-            if (_protection.Count < 5)
-                return;
-
             int w = ClientSize.Width;
             int pw = Config.PROTECTION_WIDTH;
 
             int y = ClientSize.Height - Config.PINGUIN_HEIGHT - Config.PROTECTION_HEIGHT - 20;
 
-            // IA : calcule selon la taille de l'écran
-            _protection[0].SetPosition(w / 10 - pw / 2, y);
-            _protection[1].SetPosition(w * 3 / 10 - pw / 2, y - 50);
-            _protection[2].SetPosition((w - pw) / 2, y);
-            _protection[3].SetPosition(w * 7 / 10 - pw / 2, y - 50);
-            _protection[4].SetPosition(w * 9 / 10 - pw / 2, y);
+            // IA : calcule selon la taille de l’écran
+            foreach (Protection protection in _protection)
+            {
+                int x = w * (protection.Slot * 2 + 1) / 10 - pw / 2;
+                int height = y;
+                if (protection.Slot == 1 || protection.Slot == 3)
+                {
+                    height -= 50;
+                }
+                protection.SetPosition(x, height);
+            }
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -197,10 +199,7 @@ namespace ShootMeUp
                 {
                     if (_protection[j].touched(_snowballs[i]))
                     {
-                        if (_protection[j].loseLife())
-                        {
-                            _protection.RemoveAt(j);
-                        }
+
 
                         _snowballs.RemoveAt(i);
                         touched = true;
@@ -234,7 +233,21 @@ namespace ShootMeUp
             {
                 EnemyProjectile projectile = _enemies.Projectiles[i];
 
-                if (projectile.y > ClientSize.Height ||
+                bool touched = false;
+                for (int j = _protection.Count - 1; j >= 0; j--)
+                {
+                    if (_protection[j].touched(projectile))
+                    {
+                        if (_protection[j].loseLife())
+                        {
+                            _protection.RemoveAt(j);
+                        }
+                        touched = true;
+                        break;
+                    }
+                }
+
+                if (touched || projectile.y > ClientSize.Height ||
                     projectile.x + Config.ENEMY_PROJECTILE_WIDTH < 0 || projectile.x > ClientSize.Width ||
                     projectile.y + Config.ENEMY_PROJECTILE_HEIGHT < 0)
                 {

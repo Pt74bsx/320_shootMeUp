@@ -17,15 +17,18 @@ namespace ShootMeUp
         private static readonly Image _protectionLow = ImageHelper.ResizeImage(Resources.protection_1, Config.PROTECTION_WIDTH, Config.PROTECTION_HEIGHT);
         private int x;
         private int y;
+        private int _lives = 5;
+        public int Slot { get; private set; }
 
         public enum StateProtection { FULL, HIGH, MEDIUM, LOW }
 
         public StateProtection LevelProtection { get; private set; } = StateProtection.FULL;
 
-        public Protection(int x, int y)
+        public Protection(int x, int y, int slot = 0)
         {
             this.x = x;
             this.y = y;
+            Slot = slot;
         }
 
         public void SetPosition(int x, int y)
@@ -51,24 +54,40 @@ namespace ShootMeUp
             return false;
         }
 
+        public Rectangle Bounds()
+        {
+            return new Rectangle(x + 15, y + 15,
+                Config.PROTECTION_WIDTH - 30, Config.PROTECTION_HEIGHT - 30);
+        }
+
+        public bool touched(EnemyProjectile projectile)
+        {
+            return Bounds().IntersectsWith(projectile.Bounds());
+        }
+
         public bool loseLife()
         {
-            if (LevelProtection == StateProtection.FULL)
+            if (_lives > 0)
+            {
+                _lives--;
+            }
+
+            if (_lives == 4)
             {
                 LevelProtection = StateProtection.HIGH;
             }
 
-            else if (LevelProtection == StateProtection.HIGH)
+            else if (_lives == 3)
             {
                 LevelProtection = StateProtection.MEDIUM;
             }
 
-            else if (LevelProtection == StateProtection.MEDIUM)
+            else if (_lives == 2)
             {
                 LevelProtection = StateProtection.LOW;
             }
 
-            else if (LevelProtection == StateProtection.LOW)
+            else if (_lives == 0)
             {
                 return true;
             }
