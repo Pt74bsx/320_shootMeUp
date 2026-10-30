@@ -166,12 +166,14 @@ namespace ShootMeUp
                     {
                         Enemies.RemoveAt(i);
                         Reinforce();
+                        return enemy.Points;
                     }
                     return 0;
                 }
             }
             return -1;
         }
+
 
         public void Reinforce()
         {

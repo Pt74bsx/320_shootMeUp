@@ -3,6 +3,7 @@ namespace ShootMeUp
     public partial class GameSpace : Form
     {
         public HealthHelper Health { get; private set; } = new HealthHelper();
+        public ScoreHelper Score { get; private set; } = new ScoreHelper();
 
         private readonly EnemyHelper _enemies = new EnemyHelper();
         private Image? _background;
@@ -91,13 +92,15 @@ namespace ShootMeUp
             Invalidate();
         }
 
-
         private void UpdateLabels()
         {
+            lblScore.Text = "Score : " + Score.Points;
+
             pbLife1.Visible = Health.Lives >= 1;
             pbLife2.Visible = Health.Lives >= 2;
             pbLife3.Visible = Health.Lives >= 3;
         }
+
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
@@ -241,6 +244,8 @@ namespace ShootMeUp
                 int points = _enemies.HitBySnowball(_snowballs[i], ClientSize.Width, ClientSize.Height);
                 if (points >= 0)
                 {
+                    Score.AddScore(points);
+                    UpdateLabels();
                     _snowballs.RemoveAt(i);
                     continue;
                 }
@@ -252,6 +257,7 @@ namespace ShootMeUp
             }
 
         }
+
 
         private void UpdateEnemyProjectiles()
         {

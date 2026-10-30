@@ -12,6 +12,7 @@ namespace ShootMeUp
 
         public int Type { get; private set; }
         public int Lives { get; private set; }
+        public int Points { get; private set; }
 
         public float ShootCooldown { get; set; }
         public float ShootTime { get; set; }
@@ -58,6 +59,7 @@ namespace ShootMeUp
             TargetRow = row;
             Type = row;
             Lives = row + 1;
+            Points = Lives * 10;
         }
 
         public void Move(int column, int row, int direction)

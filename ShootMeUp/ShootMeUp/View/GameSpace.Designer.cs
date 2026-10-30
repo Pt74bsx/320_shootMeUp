@@ -20,6 +20,7 @@ namespace ShootMeUp
             pbLife3 = new PictureBox();
             pbLife2 = new PictureBox();
             pbLife1 = new PictureBox();
+            lblScore = new Label();
             ((System.ComponentModel.ISupportInitialize)pbLife3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbLife2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbLife1).BeginInit();
@@ -58,6 +59,15 @@ namespace ShootMeUp
             pbLife1.TabIndex = 2;
             pbLife1.TabStop = false;
             // 
+            // lblScore
+            // 
+            lblScore.AutoSize = true;
+            lblScore.Location = new Point(25, 12);
+            lblScore.Name = "lblScore";
+            lblScore.Size = new Size(38, 15);
+            lblScore.TabIndex = 3;
+            lblScore.Text = "label1";
+            // 
             // GameSpace
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -65,6 +75,7 @@ namespace ShootMeUp
             BackgroundImage = Properties.Resources.gameMape;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1200, 600);
+            Controls.Add(lblScore);
             Controls.Add(pbLife1);
             Controls.Add(pbLife2);
             Controls.Add(pbLife3);
@@ -80,6 +91,7 @@ namespace ShootMeUp
             ((System.ComponentModel.ISupportInitialize)pbLife2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbLife1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -87,5 +99,6 @@ namespace ShootMeUp
         private PictureBox pbLife3;
         private PictureBox pbLife2;
         private PictureBox pbLife1;
+        private Label lblScore;
     }
 }
