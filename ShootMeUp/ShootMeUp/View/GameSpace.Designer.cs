@@ -20,10 +20,13 @@ namespace ShootMeUp
             pbLife3 = new PictureBox();
             pbLife2 = new PictureBox();
             pbLife1 = new PictureBox();
+            valueScore = new Label();
+            ScorePanel = new Panel();
             lblScore = new Label();
             ((System.ComponentModel.ISupportInitialize)pbLife3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbLife2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbLife1).BeginInit();
+            ScorePanel.SuspendLayout();
             SuspendLayout();
             // 
             // pbLife3
@@ -59,14 +62,42 @@ namespace ShootMeUp
             pbLife1.TabIndex = 2;
             pbLife1.TabStop = false;
             // 
+            // valueScore
+            // 
+            valueScore.AutoSize = true;
+            valueScore.BackColor = Color.Transparent;
+            valueScore.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            valueScore.ForeColor = Color.DodgerBlue;
+            valueScore.Location = new Point(153, 26);
+            valueScore.Name = "valueScore";
+            valueScore.Size = new Size(25, 25);
+            valueScore.TabIndex = 6;
+            valueScore.Text = "0";
+            // 
+            // ScorePanel
+            // 
+            ScorePanel.BackColor = Color.Transparent;
+            ScorePanel.BackgroundImage = Properties.Resources.background_score;
+            ScorePanel.BackgroundImageLayout = ImageLayout.Stretch;
+            ScorePanel.Controls.Add(lblScore);
+            ScorePanel.Controls.Add(valueScore);
+            ScorePanel.Location = new Point(0, 0);
+            ScorePanel.Margin = new Padding(0);
+            ScorePanel.Name = "ScorePanel";
+            ScorePanel.Size = new Size(312, 72);
+            ScorePanel.TabIndex = 7;
+            // 
             // lblScore
             // 
             lblScore.AutoSize = true;
-            lblScore.Location = new Point(25, 12);
+            lblScore.BackColor = Color.Transparent;
+            lblScore.Font = new Font("Stencil", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblScore.ForeColor = Color.White;
+            lblScore.Location = new Point(52, 26);
             lblScore.Name = "lblScore";
-            lblScore.Size = new Size(38, 15);
-            lblScore.TabIndex = 3;
-            lblScore.Text = "label1";
+            lblScore.Size = new Size(95, 25);
+            lblScore.TabIndex = 6;
+            lblScore.Text = "Score :";
             // 
             // GameSpace
             // 
@@ -75,7 +106,7 @@ namespace ShootMeUp
             BackgroundImage = Properties.Resources.gameMape;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1200, 600);
-            Controls.Add(lblScore);
+            Controls.Add(ScorePanel);
             Controls.Add(pbLife1);
             Controls.Add(pbLife2);
             Controls.Add(pbLife3);
@@ -90,8 +121,9 @@ namespace ShootMeUp
             ((System.ComponentModel.ISupportInitialize)pbLife3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbLife2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbLife1).EndInit();
+            ScorePanel.ResumeLayout(false);
+            ScorePanel.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -99,6 +131,8 @@ namespace ShootMeUp
         private PictureBox pbLife3;
         private PictureBox pbLife2;
         private PictureBox pbLife1;
+        private Label valueScore;
+        private Panel ScorePanel;
         private Label lblScore;
     }
 }

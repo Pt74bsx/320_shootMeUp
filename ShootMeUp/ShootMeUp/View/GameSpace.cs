@@ -94,16 +94,11 @@ namespace ShootMeUp
 
         private void UpdateLabels()
         {
-            lblScore.Text = "Score : " + Score.Points;
+            valueScore.Text = "Score : " + Score.Points;
 
             pbLife1.Visible = Health.Lives >= 1;
             pbLife2.Visible = Health.Lives >= 2;
             pbLife3.Visible = Health.Lives >= 3;
-        }
-
-
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
         }
 
         protected override void OnPaint(PaintEventArgs e)

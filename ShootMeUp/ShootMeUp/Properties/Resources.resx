@@ -118,32 +118,128 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="backgroundHomeSpace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundHomeSpace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_over_leave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_over_leave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pinguinLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pinguinLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="protection-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\protection-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pinguinRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pinguinRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_over_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_over_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="golem_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_credit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="morse_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_over_credit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_over_credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="morse_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_over_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_over_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hibou_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="protection-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\protection-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn_leave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_leave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_over_leave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_over_leave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pinguinShoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pinguinShoot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pinguin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pinguin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snowball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snowball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gameMape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gameMape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibou_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coeur_vie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coeur_vie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golem_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golem_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundHomeSpace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundHomeSpace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="protection-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\protection-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morse_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morse_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_credit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,109 +247,16 @@
   <data name="btn_over_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_over_settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pinguin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pinguin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gameMape" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gameMape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pinguinLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pinguinLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pinguinRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pinguinRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pinguinShoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pinguinShoot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="snowball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snowball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="protection-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\protection-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="protection-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\protection-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="protection-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\protection-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="protection-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\protection-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="golem_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="golem_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="golem_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="golem_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hibou_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibou_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="golem_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\golem_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="golem_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="protection-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\protection-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="golem_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="golem_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golem_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hibou_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hibou_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_bas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_bas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_droite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_droite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_haut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_haut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_projectile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_projectile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_repos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_repos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_repos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_repos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morse_tir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morse_tir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coeur_vie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coeur_vie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background_score" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_score.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
