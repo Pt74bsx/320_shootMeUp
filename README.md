@@ -19,7 +19,6 @@ L'objectif du projet est de mettre en pratique la programmation orientée objet 
 - `ShootMeUp/ShootMeUp/View` : affichage et interface
 - `ShootMeUp/ShootMeUp/Resources` : ressources du projet
 - `doc` : documentation
-- `assets` : éléments visuels du dépôt
 
 ## 🚀 Lancer le projet
 
