@@ -87,6 +87,11 @@ namespace ShootMeUp
                 _player.Stop();
                 _player.shootPinguin = false;
                 _isShoot = false;
+
+                SpaceManager.End.SetScore(Score.Points);
+
+                SpaceManager.End.Show();
+                this.Hide();
             }
 
             Invalidate();
@@ -253,7 +258,6 @@ namespace ShootMeUp
 
         }
 
-
         private void UpdateEnemyProjectiles()
         {
             for (int i = _enemies.Projectiles.Count - 1; i >= 0; i--)
@@ -292,7 +296,6 @@ namespace ShootMeUp
                 }
             }
         }
-
 
         private void MovePlayer()
         {
@@ -333,7 +336,6 @@ namespace ShootMeUp
             float y = _player.y;
             _snowballs.Add(new Snowball(x, y));
         }
-
         private void GameSpace_Resize(object? sender, EventArgs e)
         {
             _player.Update(0, ClientSize.Width);
@@ -421,6 +423,56 @@ namespace ShootMeUp
             {
                 Shoot();
             }
+        }
+
+        /// <summary>
+        /// Permet de remettre toutes les valeurs
+        /// utilisées dans le jeux à leurs valeurs 
+        /// initiale 
+        /// </summary>
+        public void ResetGame()
+        {
+            // Vies et score 
+            Health.Reset();
+            Score.Reset();
+            UpdateLabels();
+
+            // Touches
+            _keyA = false;
+            _keyD = false;
+            _keyLeft = false;
+            _keyRight = false;
+            _stopRequested = false;
+
+            // Tir
+            _isShoot = false;
+            _shootTime = 0;
+            _shootCooldown = 0;
+
+            // Pinguin
+            _player.Stop();
+            _player.shootPinguin = false;
+            _player.x = (ClientSize.Width - Config.PINGUIN_WIDTH) / 2;
+            _player.y = ClientSize.Height - Config.PINGUIN_HEIGHT;
+            _snowballs.Clear();
+
+            // enemis
+            _enemies.Reset();
+
+            // protections
+            _protection.Clear();
+
+            for (int i = 0; i < 5; i++)
+            {
+                _protection.Add(new Protection(0, 0, i));
+            }
+
+            PositionProtections();
+
+            // chronomètre
+            _clock.Reset();
+
+            Invalidate();
         }
     }
 }

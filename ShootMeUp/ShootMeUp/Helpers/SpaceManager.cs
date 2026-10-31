@@ -14,12 +14,15 @@ namespace ShootMeUp
 
         public static GameSpace Game { get; private set; } = null!;
 
+        public static EndSpace End { get; private set; } = null!;
+
         // Initialise toutes les fenêtres
         public static void Initialize()
         {
             Home = new HomeSpace();
             Credit = new CreditSpace();
             Game = new GameSpace();
+            End = new EndSpace();
             Game.Activated += JeuActive;
             Game.Deactivate += JeuDesactive;
         }

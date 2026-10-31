@@ -19,9 +19,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeSpace));
             tableLayoutPanel1 = new TableLayoutPanel();
-            btnPlay = new Button();
             btnLeave = new Button();
             btnCredit = new Button();
+            btnPlay = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,29 +48,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 19F));
             tableLayoutPanel1.Size = new Size(1200, 600);
             tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnPlay
-            // 
-            btnPlay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnPlay.BackColor = Color.Transparent;
-            btnPlay.BackgroundImage = Properties.Resources.btn_play;
-            btnPlay.BackgroundImageLayout = ImageLayout.Zoom;
-            btnPlay.FlatAppearance.BorderSize = 0;
-            btnPlay.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnPlay.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnPlay.FlatStyle = FlatStyle.Flat;
-            btnPlay.Location = new Point(390, 283);
-            btnPlay.Margin = new Padding(30, 8, 30, 8);
-            btnPlay.Name = "btnPlay";
-            btnPlay.Size = new Size(420, 81);
-            btnPlay.TabIndex = 0;
-            btnPlay.UseVisualStyleBackColor = false;
-            btnPlay.Click += btnPlay_Click;
-            btnPlay.Enter += btnPlay_MouseHover;
-            btnPlay.Leave += btnPlay_MouseLeave;
-            btnPlay.MouseEnter += btnPlay_MouseHover;
-            btnPlay.MouseLeave += btnPlay_MouseLeave;
-            btnPlay.MouseHover += btnPlay_MouseHover;
             // 
             // btnLeave
             // 
@@ -117,6 +94,29 @@
             btnCredit.MouseEnter += btnCredit_MouseHover;
             btnCredit.MouseLeave += btnCredit_MouseLeave;
             btnCredit.MouseHover += btnCredit_MouseHover;
+            // 
+            // btnPlay
+            // 
+            btnPlay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnPlay.BackColor = Color.Transparent;
+            btnPlay.BackgroundImage = Properties.Resources.btn_play;
+            btnPlay.BackgroundImageLayout = ImageLayout.Zoom;
+            btnPlay.FlatAppearance.BorderSize = 0;
+            btnPlay.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnPlay.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnPlay.FlatStyle = FlatStyle.Flat;
+            btnPlay.Location = new Point(390, 283);
+            btnPlay.Margin = new Padding(30, 8, 30, 8);
+            btnPlay.Name = "btnPlay";
+            btnPlay.Size = new Size(420, 81);
+            btnPlay.TabIndex = 0;
+            btnPlay.UseVisualStyleBackColor = false;
+            btnPlay.Click += btnPlay_Click;
+            btnPlay.Enter += btnPlay_MouseHover;
+            btnPlay.Leave += btnPlay_MouseLeave;
+            btnPlay.MouseEnter += btnPlay_MouseHover;
+            btnPlay.MouseLeave += btnPlay_MouseLeave;
+            btnPlay.MouseHover += btnPlay_MouseHover;
             // 
             // HomeSpace
             // 

@@ -63,6 +63,16 @@ namespace ShootMeUp.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_EndSpace {
+            get {
+                object obj = ResourceManager.GetObject("background_EndSpace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_score {
             get {
                 object obj = ResourceManager.GetObject("background_score", resourceCulture);
@@ -76,6 +86,16 @@ namespace ShootMeUp.Properties {
         internal static System.Drawing.Bitmap backgroundHomeSpace {
             get {
                 object obj = ResourceManager.GetObject("backgroundHomeSpace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_backToHome {
+            get {
+                object obj = ResourceManager.GetObject("btn_backToHome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,16 @@ namespace ShootMeUp.Properties {
         internal static System.Drawing.Bitmap btn_play {
             get {
                 object obj = ResourceManager.GetObject("btn_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_replay {
+            get {
+                object obj = ResourceManager.GetObject("btn_replay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
