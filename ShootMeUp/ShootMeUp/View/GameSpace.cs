@@ -94,7 +94,7 @@ namespace ShootMeUp
 
         private void UpdateLabels()
         {
-            valueScore.Text = "Score : " + Score.Points;
+            valueScore.Text = "" + Score.Points;
 
             pbLife1.Visible = Health.Lives >= 1;
             pbLife2.Visible = Health.Lives >= 2;
