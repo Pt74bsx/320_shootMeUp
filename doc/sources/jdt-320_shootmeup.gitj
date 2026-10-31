@@ -476,6 +476,46 @@
       "description": "Notation des tâches effectuées durant la séquence du 09.10.2026",
       "duration": 20,
       "status": "Done"
+    },
+    {
+      "id": "ec10ccf5-be2d-4d0f-937a-056291351185",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T16:00:00.000Z",
+      "name": "refactore(code): Nettoyage du code",
+      "description": "Code énormément simplifié et structure du code, commentaire, etc, nettoyé. (Dans le code ajout de commentaire sur chaque bout de code généré par IA)",
+      "duration": 30,
+      "status": "Done"
+    },
+    {
+      "id": "25a96c4b-f15e-4f6b-952f-b98c56ed4711",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T16:30:00.000Z",
+      "name": "feat(code): Ajout du spawn des ennemis avec la préparation des images",
+      "description": "Ajout de l'apparition des ennemis sur la map et ajout de toutes les images des ennemis au projet",
+      "duration": 70,
+      "status": "Done"
+    },
+    {
+      "id": "ece43d85-df75-45e8-b0c1-432def2fbdc8",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T17:45:00.000Z",
+      "name": "feat(code): Ajout de la gestion des cases libre",
+      "description": "Système pour savoir si une case de la grille (voir maquette) et libre ou non ",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "e20b111f-651f-4c25-9fc2-179e16b29e3e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T17:50:00.000Z",
+      "name": "feat(code): Ajout du déplacement des ennemis",
+      "description": "Les ennemis peuvent se déplacer sur des cases libres ",
+      "duration": 30,
+      "status": "Done"
     }
   ]
 }
