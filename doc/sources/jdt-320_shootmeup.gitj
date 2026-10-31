@@ -516,6 +516,196 @@
       "description": "Les ennemis peuvent se déplacer sur des cases libres ",
       "duration": 30,
       "status": "Done"
+    },
+    {
+      "id": "6d5a247f-4623-44cb-b563-a6f7cd5b77a7",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T18:20:00.000Z",
+      "name": "feat(code): Ajout des dégats des boulles de neige sur les ennemis",
+      "description": "Quand la heatbox de la boulle de neige touche la heatbox d'un ennemis il perd de la vie",
+      "duration": 15,
+      "status": "Done"
+    },
+    {
+      "id": "97570ea1-90f0-452f-bba9-2068320129f7",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T19:50:00.000Z",
+      "name": "feat(code): Ajout de la suppression des ennemis",
+      "description": "Quand un ennemi a plus de vie il dissparait ",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "e446dff6-7663-4e73-9e39-e83c34639a03",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T19:55:00.000Z",
+      "name": "feat(code): Ajout du rajout de spawn des ennemis",
+      "description": "Quand il reste plus beacoup d'ennemis, ça en fais respawn max 7 sur la map ",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "eb7c75b0-9267-4908-8b4c-679719c4c303",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T20:00:00.000Z",
+      "name": "feat(code): Ajout des projectiles ennemis",
+      "description": "Ajout des projectils des ennemis qui est un peu pret le meme systeme que la boulle de neige. Il prenne la position du pinguin et se dirige à la position (systeme de deplacement pas encore fait)",
+      "duration": 50,
+      "status": "Done"
+    },
+    {
+      "id": "da050aef-b136-4bfd-91ef-095376e90724",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T22:10:00.000Z",
+      "name": "feat(code): Ajout du déplacement des projectils",
+      "description": "Les projectils des ennemis se dirige à la position x et y du pinguin et se delet une fois sorti de la map ou après avoir touché le pinguin",
+      "duration": 25,
+      "status": "Done"
+    },
+    {
+      "id": "0fa2af4b-9107-45f1-bef5-cb659e49a545",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T22:35:00.000Z",
+      "name": "feat(code): Ajout du système de préparation du tirs",
+      "description": "La préparation du tirs est dans un helper et il gère le temps du tirs et le cooldown",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "5f7f2f9c-e5ca-4802-9da3-98a4e92138e2",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-29T23:50:00.000Z",
+      "name": "feat(code): Ajout des dégats sur les protections",
+      "description": "Ajout(amélioration)du système de vie sur les protection pour que les projectils ennemi qui touche une protection fasse perdre une vie à la protection ",
+      "duration": 30,
+      "status": "Done"
+    },
+    {
+      "id": "e0588252-ba4f-40c1-8281-c95f039e1580",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-30T00:20:00.000Z",
+      "name": "feat(code): Ajout de la vie du pinguin + rennomage fichiers",
+      "description": "Système de vie au pinguin pour que quand il est touché il perd une vie et amélioration du nommage des fichiers",
+      "duration": 30,
+      "status": "Done"
+    },
+    {
+      "id": "190cd5a2-9f8a-45a0-9858-4971682d6ae6",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-30T00:50:00.000Z",
+      "name": "feat(code): Finalisation de la perte de vie du pinguin",
+      "description": "Quand un projectil touche la heatbox du pinguin le pinguin perd une vie ",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "11d3b460-8de8-408c-8b8f-39518af9c580",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-30T01:10:00.000Z",
+      "name": "feat(code): Ajout de la fin de patie",
+      "description": "Quand le pinguin a plus de vie il s'arrete et les ennemis arretent de tirer",
+      "duration": 10,
+      "status": "Done"
+    },
+    {
+      "id": "26d8144f-0932-479d-bf3b-baa25b415191",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-30T02:05:00.000Z",
+      "name": "feat(code): Ajout du système de score",
+      "description": "Quand le pinguin tue un énnemi il gagne des point + sur l'écran on vois le score qui se met à jours à chaque kill et selon le type d'ennemi les points gagné changent ",
+      "duration": 35,
+      "status": "Done"
+    },
+    {
+      "id": "b2ad10f9-c620-460e-83b9-d64697e968f0",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-30T03:55:00.000Z",
+      "name": "chore(doc): Ajout d'un fichier temporaire du travail a faire",
+      "description": "Fichier txt temporaire pour savoir le travail que je dois faire le lendemain ",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "e63c1b18-afc9-4d9e-b94e-be12ac4daa4f",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T07:10:00.000Z",
+      "name": "feat(code): Ajout de l'esthétique sur le score",
+      "description": "Ajout d'un cadran au score et police pour le texte + ajout et organisation de plusieurs images pour le jeux principalement pour les ennemis. Petit problème pour le text qui se mettait paas bien sur le cadran après de long essaye je suis passé par un pannel pour avoir un résultat clean",
+      "duration": 50,
+      "status": "Done"
+    },
+    {
+      "id": "caba6c54-ad20-4484-919b-95b5c01869eb",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T08:00:00.000Z",
+      "name": "fix(code): Correction de l'affichage du score",
+      "description": "J'ai enlever le texte \"Score :\" qui était mit dans le code pour la gestion du score, car j'ai décider de le mettre directement dans l'affichage de base.",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "f0ea7e8b-10c2-4474-8e48-02795394b4a0",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T08:05:00.000Z",
+      "name": "chore(repo): Nettoyage et organisation du repos amélioré",
+      "description": "Nettoyage du repos, rennomage de plusieurs fichiers, séparé par catégorie les images qui sont dans ressources, etc.",
+      "duration": 15,
+      "status": "Done"
+    },
+    {
+      "id": "9738bc15-6db1-4fa6-b15e-ae9d9155a736",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T08:20:00.000Z",
+      "name": "chore(jdt): Ajout du fichier d'installation du programme qui permet d'éditer le journal de travail",
+      "description": "Pour avoir a disposition tout le temps l'outil qui permet d'éditer le journal de travail.",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "722ff8c5-0622-4447-88f1-a6ae79d59423",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T08:25:00.000Z",
+      "name": "Updates README",
+      "description": "Mise à jours de la description de quoi contient quoi dans le repos",
+      "duration": 5,
+      "status": "Done"
+    },
+    {
+      "id": "c1f7b6a6-078a-4a00-b848-05e83410d898",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T08:30:00.000Z",
+      "name": "feat(code): Ajout du système de fin de partie",
+      "description": "Ajout de à la fin de la partie l'affichage de l'écran de fin de partie avec le score de la partie ainsi que un bouton qui permet de relancer directement une partie (toutes les valeurs sont reset) et d'un bouton qui permet de retourner à l'accueil (toutes les valeurs de la partie sont également reset par sécurité)",
+      "duration": 120,
+      "status": "Done"
+    },
+    {
+      "id": "3d322b17-cdc8-4835-a68d-4c35d896fbd3",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T10:30:00.000Z",
+      "name": "Chore(journal de travail): Mise à jours",
+      "description": "Ajout de toutes les tâches effectuer qui n'étaient pas noté afin de ratraper le retard du journal de travail",
+      "duration": 30,
+      "status": "Done"
     }
   ]
 }
