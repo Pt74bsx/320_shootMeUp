@@ -716,6 +716,46 @@
       "description": "Ajout de toutes les tâches effectuer qui n'étaient pas noté afin de ratraper le retard du journal de travail",
       "duration": 60,
       "status": "Done"
+    },
+    {
+      "id": "454fe5d5-2987-41ed-87f0-a57b30fe7373",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T16:30:00.000Z",
+      "name": "chore(rapport): Réalisation du rapport",
+      "description": "J'ai fini le rapport, chapitre sur l'utilisation de l'IA, la conclusion, les sources, annexes, etc.",
+      "duration": 80,
+      "status": "Done"
+    },
+    {
+      "id": "0e533765-2467-4034-bafa-dd393b934434",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T17:50:00.000Z",
+      "name": "feat(code): Ajout des tests unitaires",
+      "description": "Ajout de tout les tests unitaires qui sont tous valide il y en a 6",
+      "duration": 65,
+      "status": "Done"
+    },
+    {
+      "id": "c5199d33-c39f-47e0-b08c-7c9e4199f632",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T18:55:00.000Z",
+      "name": "doc(rapport): Ajout du chapitre sur les tests unitaires",
+      "description": "Ajout d'un tableau résument les tests et une image des tests valide",
+      "duration": 25,
+      "status": "Done"
+    },
+    {
+      "id": "52314706-033b-41ce-bfb3-4ef5411af24e",
+      "type": "commitless",
+      "author": "Pt74bsx",
+      "date": "2026-10-31T19:25:00.000Z",
+      "name": "chore(journal de travail): Mise à jours du journal de travail",
+      "description": "Notation de toutes les tâches effectué qui n'étaient pas notées",
+      "duration": 15,
+      "status": "Done"
     }
   ]
 }
